@@ -25,4 +25,15 @@
 
 }
 
-//sayWhat
+//Custom Media Queries
+@media only screen and (min-width: 601px){
+
+	nav, 
+	nav .nav-wrapper i, 
+	nav a.button-collapse, 
+	nav a.button-collapse i {
+	    height: 100%;
+	    line-height: 164px;
+	}
+
+}

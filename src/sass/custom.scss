@@ -32,6 +32,11 @@ h1 {
 	height: 120px;
 }
 
+h2 {
+	font-size: 1.7em;
+	margin: 0.7em 0em 0em 0.8em;
+}
+
 // CARD RESETS
 // Materialize Card Link Override
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating)  {
@@ -59,29 +64,30 @@ nav ul li {
    float: none;
 }
 
-.btn-floating, .btn-floating:hover  {
+.btn-floating, 
+.btn-floating:hover  {
 	background-color: $stats-green;
 }
 
-@media only screen and (min-width: 601px){
-
-	nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
-	    height: 100%;
-	    line-height: 164px;
-	}
-
-}
 
 nav {
-
     color: none;
     background-color: none;
-
 }
 
-//Float right
+.fr {
+	float: right;
+}
 
-.fr {float: right;}
+.color-panel {
+	height: 12em;
+	background-color: $stats-orange;
+
+	.black {background-color: $stats-black;}
+	.orange {background-color: $stats-orange;}
+	.purple {background-color: $stats-purple;}
+	.blue {background-color: $stats-blue;}
+}
 
 
 
