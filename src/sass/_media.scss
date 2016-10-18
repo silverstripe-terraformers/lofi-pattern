@@ -1,0 +1,28 @@
+// All  materialize sass media queries
+@media #{$small-and-down} {
+  // styles for small screens and down
+	i .material-icons {
+		font-size: 1em;
+	}
+}
+@media #{$medium-and-up} {
+  // styles for medium screens and larger
+	i .material-icons {
+		font-size: 1em;
+	}
+}
+@media #{$medium-and-down} {
+  // styles for medium screens and down
+	i .material-icons {
+		font-size: 1em;
+	}
+}
+@media #{$large-and-up} {
+  // styles for large screens and up
+  i .material-icons {
+  	font-size: 1em;
+  }
+
+}
+
+//sayWhat

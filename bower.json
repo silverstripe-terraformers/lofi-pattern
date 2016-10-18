@@ -1,0 +1,16 @@
+{
+  "name": "lofi-pattern",
+  "description": "pattern lib for Statistics New Zealand Front End",
+  "version": "0.0.0",
+  "main": "dist/template-html.js",
+  "repository": "",
+  "dependencies": {
+  	"bootstrap": "latest",
+  	"font-awesome": "latest",
+  	"jquery": "latest",
+  	"material-design-icons": "latest",
+  	"material-icons": "latest",
+  	"materialize": "latest",
+  	"slideout": "latest"
+  }
+}
