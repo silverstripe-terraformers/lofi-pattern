@@ -17,6 +17,8 @@ Created: Sep 30, 2016
 Author:  Jared Neems // Statistics New Zealand
 Pupose:  Front End UI Javascript For Initial Design, User Interface, 
 		 Responsive Testing and Presentation.
+Notes:   All node module export methods like 'cm()' below are renamed to shorthand. custom.js = cm
+         namespace.js  = nm. 
 Standards: 
 */
 

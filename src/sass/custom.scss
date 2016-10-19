@@ -14,6 +14,7 @@
 //Normal Sass Imports
 @import 'nav';
 @import 'media';
+@import 'elements';
 
 
 // Resets
@@ -24,17 +25,6 @@ body {
 // Fonts
 html * {
 	font-family: 'Source Sans Pro';
-}
-
-// Custom Updates
-h1 {
-	font-style: 45px;
-	height: 120px;
-}
-
-h2 {
-	font-size: 1.7em;
-	margin: 0.7em 0em 0em 0.8em;
 }
 
 // CARD RESETS
@@ -87,6 +77,12 @@ nav {
 	.orange {background-color: $stats-orange;}
 	.purple {background-color: $stats-purple;}
 	.blue {background-color: $stats-blue;}
+	.cyan {background-color: $stats-cyan;}
+	.red {background-color: $stats-red;}
+	.yellow {background-color: $stats-yellow;}
+	.green {background-color: $stats-green;}
+	.grey {background-color: $stats-grey;}
+	
 }
 
 
