@@ -7,7 +7,28 @@ table {
 	tr,
 	th,
 	thead {
-		padding: 15px 15px;
+		padding: 0.8em;
 	}
+
+}
+
+pre {
+  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+  margin-bottom: 10px;
+  overflow: auto;
+  width: auto;
+  padding: 5px;
+  background-color: #000;
+  max-height: 600px;
+  color: $stats-cyan;
+}
+
+
+.card {
+	padding: 1em;
+}
+
+.nav-horizontal {
+	padding: 0.4em 0em 0em 1em;
 
 }
