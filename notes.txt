@@ -1,1 +1,3 @@
-http://brettjankord.com/projects/style-guide-boilerplate/
+http://brettjankord.com/projects/style-guide-boilerplate/ 
+
+// Commented out line 34 of sideNav.js for pattern library benefits.

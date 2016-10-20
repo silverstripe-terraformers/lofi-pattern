@@ -31,7 +31,7 @@ exports.sn = function(){
 
             if (thisParentUl.hasClass(settings.classMaster) && ! thisLi.hasClass(settings.classClickable)) {
 
-                event.preventDefault();
+                // event.preventDefault();
                 event.stopPropagation();
 
                 _leftNavigationActiveMain(thisLi);
