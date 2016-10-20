@@ -1,3 +1,13 @@
 http://brettjankord.com/projects/style-guide-boilerplate/ 
 
 // Commented out line 34 of sideNav.js for pattern library benefits.
+
+Home: 20-10-2016
+Formed Repo on home machine
+Corrected Node Modules
+Formated and researcged grid layout page
+Initiated Cards page
+Improved colors page
+Adjusted typography page
+Impelmented cards on all internal elements
+Corrected nav links and js bug
