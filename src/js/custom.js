@@ -76,6 +76,9 @@ exports.cm = function(){
 			//Modal Trigger and Setup
 			$('.modal-trigger').leanModal();
 
+			//Materialize Setup for check boxes. 
+			$('select').material_select();
+
 		};
 
 	// Monitor Screen size for new menu breakpoint:

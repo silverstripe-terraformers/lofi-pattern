@@ -11,3 +11,29 @@ Improved colors page
 Adjusted typography page
 Impelmented cards on all internal elements
 Corrected nav links and js bug
+
+---------------------------------------------------------------------
+
+Design Meeting Notes:
+- Fix Headers
+- CSS Media Q's
+- Navigation Fix / Test
+- Full Width Nav
+- Adjust Media Breakpoints
+- Charts (High Charts)
+- Demo Page
+- Cards
+- Modals & Modals containing Markup
+- Code in Modals
+- Tabs or Alternative for (Table and Graph Display)
+- Menu Active States & Small Side Triangle
+- Breadcrumbs
+- Quick Populate
+- Scroll Spy & Smooth Scroll
+- Modal Markup and Copy
+
+
+
+
+
+
