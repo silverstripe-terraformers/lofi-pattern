@@ -10361,7 +10361,6 @@ var namespace = require('./namespace.js');
 var sideNavigation = require('./sidenav.js');
 
 
-
 // All Custom JS
 exports.cm = function(){
 
@@ -10438,7 +10437,7 @@ exports.cm = function(){
 		};
 
 	// Monitor Screen size for new menu breakpoint:
-	UI.menus();	
+	// UI.menus();	
 	UI.init();
 
 })(); //iffe ends
