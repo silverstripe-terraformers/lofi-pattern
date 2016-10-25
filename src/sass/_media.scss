@@ -1,33 +1,90 @@
-// All  materialize sass media queries
-@media #{$small-and-down} {
-  // styles for small screens and down
-	i .material-icons {
-		font-size: 1em;
-	}
+// Media Queries
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
+		  		color: green;
+		  	}
+
+		// Remove full screen side nav
+	  	.left-nav-container {
+	  		display: none;
+	  	}
+
+	  	.nav-horizontal {
+	  		width: 100%;
+	  	}
 }
-@media #{$medium-and-up} {
-  // styles for medium screens and larger
-	i .material-icons {
-		font-size: 1em;
-	}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
+		  		color: blue;
+		  	}
+
+	  	// Remove full screen side nav
+	  	.left-nav-container {
+	  		display: none;
+	  	}
+
+	  	.nav-horizontal {
+	  		width: 100%;
+	  	}
 }
-@media #{$medium-and-down} {
-  // styles for medium screens and down
-	i .material-icons {
-		font-size: 1em;
-	}
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
+		  		color: yellow;
+		  	}
+
+	  	// Remove full screen side nav
+	  	.left-nav-container {
+	  		display: none;
+	  	}
+
+	  	.nav-horizontal {
+	  		width: 100%;
+	  	}
 }
-@media #{$large-and-up} {
-  // styles for large screens and up
-  i .material-icons {
-  	font-size: 1em;
-  }
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
+		  		color: red;
+		  	}
+
+	  	// Remove full screen side nav
+	  	.left-nav-container {
+	  		display: none;
+	  	}
+
+	  	.nav-horizontal {
+	  		width: 100%;
+	  	}
 
 }
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+		// Display full screen side nav
+	  	.left-nav-container {
+	  		display: block;
+	  	}
+
+	  	.nav-horizontal {
+	  		width: 83.6667%;
+	  	}
+}
+@media (min-width:1281px) { /* hi-res laptops and desktops */ 
+		// Display full screen side nav
+	  	.left-nav-container {
+	  		display: block;
+	  	}
+
+	  	.nav-horizontal {
+	  		width: 83.6667%;
+	  	}
+
+
+}
+
+
+
 
 //Custom Media Queries
 @media only screen and (min-width: 601px){
-
 	nav, 
 	nav .nav-wrapper i, 
 	nav a.button-collapse, 
@@ -35,5 +92,7 @@
 	    height: 100%;
 	    line-height: 164px;
 	}
-
 }
+
+
+

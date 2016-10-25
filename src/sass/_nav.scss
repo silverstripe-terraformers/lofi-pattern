@@ -92,14 +92,15 @@ h6 {
 
   li {
 
-    width: 75%;
+    width: 100%;
     margin: 0 auto;
 
     a {
+      height: 3.2em;
       z-index : 1;
-      font-size: 1em;
+      font-size: 1.3em;
       display: block;
-      padding: 0.8rem 1rem 0.8rem 0.8rem;
+      padding: 1rem 1rem 0.8rem 0.8rem;
       color: $stats-white;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -121,7 +122,7 @@ h6 {
         right: 0;
 
         width: 3rem;
-        padding: 0.8rem 0;
+        padding: 0.9rem 0;
         text-align: center;
 
       }
@@ -241,8 +242,9 @@ h6 {
     background-color: $stats-black;
     border-bottom: $stats-grey solid 1px;
     font-size: 1.4em;
+    font-weight: 300;
     text-align: center;
-    padding-top: 1em;
+    padding-top: 1.4em;
     color: $stats-white;
 }
 
@@ -392,4 +394,51 @@ div.nav-horizontal i:nth-child(2) {
 .mob-menu {
   display: none;
 }
+
+
+// Nav Search Module
+
+.search-module {
+  padding: 1em 0em 1em 0em;
+  border-bottom: 1px solid #706f6e;
+  display: block;
+
+}
+
+// Search Icon In Nav
+.icon-contain {
+  display: inline-block;
+  float: right;
+  width: 15%;
+
+  i.material-icons.prefix{
+    font-size: 1.9em;
+    color: $stats-orange;
+    padding: 0.07em 0em 0em 0.1em;
+  }
+
+}
+
+// Search Text Area
+.text-contain {
+  width: 85%;
+
+  textarea#icon_prefix2.materialize-textarea{
+    background-color: white;
+    border-radius: 4px;
+    font-size: 1.4em;
+    min-height: 1.2em;
+    max-height: 1.2em;
+    padding: 0.2em 0.2em 0.4em 0.2em;
+    width: 85%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0em; 
+  }
+
+}
+
+
+
 

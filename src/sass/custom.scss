@@ -86,6 +86,10 @@ nav {
 	
 }
 
-
-
+// Materialize Overrides
+// Input Focus Border Bottom Color 
+input[type="search"]:focus:not([readonly]), 
+textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: none;
+}
 
