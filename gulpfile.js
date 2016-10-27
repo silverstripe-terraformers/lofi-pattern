@@ -40,7 +40,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('open', ['connect'], function() {
-	gulp.src('dist/index.html')
+	gulp.src('dist/colours.html')
 		.pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/'}));
 });
 

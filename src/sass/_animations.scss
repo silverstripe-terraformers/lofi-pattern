@@ -1,15 +1,10 @@
 // All CSS Animations
 
-// Left Navigation
-
-//Targeting navigation list items only for this hover effect. Moving Arrows on Side Nav
+// Targeting navigation list items only for this hover effect. 
+// Moving Arrows on Side Nav
 #leftNavigation.master li:hover a i.fa.fa-angle-down {
 	font-weight: 800 !important;
 	transition: transform 0.4s;
 	transform: translateX(-1em) rotate(90deg);
-}
-//Set Bold On Menu Text
-#leftNavigation.master li:hover a {
-	font-weight: 600;
 }
 

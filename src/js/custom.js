@@ -7,6 +7,21 @@ var sideNavigation = require('./sidenav.js');
 //Require HighCharts
 var Highcharts = require('highcharts');
 
+//Page animation transitions
+var pageAnimation = require('animsition');
+
+
+
+//ALL CUSTOM JS
+/*
+Created: Sep 30, 2016 
+Author:  Jared Neems // Statistics New Zealand
+Pupose:  Front End UI Javascript For Initial Design, User Interface, 
+		 Responsive Testing and Presentation.
+Notes:   All node module export methods like 'cm()' below are renamed to shorthand. custom.js = cm
+         namespace.js  = nm. 
+Standards: 
+*/
 
 // All Custom JS
 exports.cm = function(){
@@ -17,27 +32,11 @@ exports.cm = function(){
 		UI = namespace.nm();
 
 		//Use namespace method
-		UI.createNS("UI.menus");
 		UI.createNS("UI.init");
+		UI.createNS("UI.menus");
 		UI.createNS("UI.charts");
 
-		UI.menus = function(){
-
-	 		//Check window size and run internal functions. 
-	 		var checkSize = $(window).width();
-
-	 		if(checkSize <= 1180){
-	 			mobileSideNav();
-	 		}
-
-			//Activate and setup mobile side navigation
-			function mobileSideNav(){
-				$('.button-collapse').sideNav();
-				$('.side-nav').css('display', 'block');
-			}
-
-		};
-
+		// All initialize UI invocations
 		UI.init = function(){
 
 			//Initialize side navigation
@@ -56,6 +55,48 @@ exports.cm = function(){
 			//Materialize Setup for check boxes. 
 			$('select').material_select();
 
+			// Animsition Page Transition effects
+	
+			$("#cardWrapper").animsition({
+				inClass: 'fade-in',
+				outClass: 'rotate-out',
+				inDuration: 1800,
+				outDuration: 800,
+				linkElement: '.animsition-link',
+				// e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
+				loading: true,
+				loadingParentElement: 'body', //animsition wrapper element
+				loadingClass: 'animsition-loading',
+				unSupportCss: [
+				'animation-duration',
+				'-webkit-animation-duration',
+				'-o-animation-duration'
+			],
+				//"unSupportCss" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+				//The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+				overlay : false,
+				overlayClass : 'animsition-overlay-slide',
+				overlayParentElement : 'body'
+			});
+
+		}; //init method ends
+
+		// Menus Functionality
+		UI.menus = function(){
+
+	 		//Check window size and run internal functions. 
+	 		var checkSize = $(window).width();
+
+	 		if(checkSize <= 1180){
+	 			mobileSideNav();
+	 		}
+
+			//Activate and setup mobile side navigation
+			function mobileSideNav(){
+				$('.button-collapse').sideNav();
+				$('.side-nav').css('display', 'block');
+			}
+
 		};
 
 		//Highcharts functionality 
@@ -63,60 +104,23 @@ exports.cm = function(){
 			// Load module after Highcharts is loaded
 			require('highcharts/modules/exporting')(Highcharts);
 
-			// Create the chart in various divs with following class
+			//Multiple Render Of High Charts with jQuery .each function
 			$('.high-chart').each(function(){
+			    var chart = new Highcharts.Chart({
+			        chart: {
+			            renderTo: this,
+			            height: 400
+			        },
+			        xAxis: {
+			            categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+			        },
 
-				var chart = new Highcharts.Chart({
-					chart:  {
-						title: {
-						    text: 'Monthly Average Temperature',
-						    x: -20 //center
-						},
-						subtitle: {
-						    text: 'Source: WorldClimate.com',
-						    x: -20
-						},
-						xAxis: {
-						    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-						        'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
-						},
-						yAxis: {
-						    title: {
-						        text: 'Temperature (°C)'
-						    },
-						    plotLines: [{
-						        value: 0,
-						        width: 1,
-						        color: '#808080'
-						    }]
-						},
-						tooltip: {
-						    valueSuffix: '°C'
-						},
-						legend: {
-						    layout: 'vertical',
-						    align: 'right',
-						    verticalAlign: 'middle',
-						    borderWidth: 0
-						},
-						series: [{
-						    name: 'Tokyo',
-						    data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
-						}, {
-						    name: 'New York',
-						    data: [-0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]
-						}, {
-						    name: 'Berlin',
-						    data: [-0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]
-						}, {
-						    name: 'London',
-						    data: [3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]
-						}]
-					}
-
-				}); //highcharts ends
-			}); //each function ends
-		}; // Ui.charts metod ends
+			        series: [{
+			            data: [29.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]        
+			        }]
+			    });
+			});
+		}; // UI.charts method ends
 		
 
 	// Monitor Screen size for new menu breakpoint:
@@ -128,5 +132,5 @@ exports.cm = function(){
 })(); //iffe ends
 
 
-};
+}; //exports.cm ends
 
