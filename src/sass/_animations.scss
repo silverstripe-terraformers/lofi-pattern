@@ -1,20 +1,15 @@
 // All CSS Animations
 
-.wrapper:hover .fa-stack{
-    color: red;
-    transition: 0.9s;
-    transform: rotateY(180deg);
-}
-
 // Left Navigation
-//Targeting navigation list items only for this hover effect
+
+//Targeting navigation list items only for this hover effect. Moving Arrows on Side Nav
 #leftNavigation.master li:hover a i.fa.fa-angle-down {
 	font-weight: 800 !important;
-	transition: transform 0.4s, font-weight 0.1s;
-	font-weight: 800;
+	transition: transform 0.4s;
 	transform: translateX(-1em) rotate(90deg);
 }
-
+//Set Bold On Menu Text
 #leftNavigation.master li:hover a {
 	font-weight: 600;
 }
+

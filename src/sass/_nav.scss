@@ -100,7 +100,7 @@ h6 {
       z-index : 1;
       font-size: 1.3em;
       display: block;
-      padding: 1rem 1rem 0.8rem 0.8rem;
+      padding: 1rem 1rem 0.8rem 1.2rem;
       color: $stats-white;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -244,12 +244,14 @@ h6 {
     font-size: 1.4em;
     font-weight: 300;
     text-align: center;
-    padding-top: 1em;
+    padding-top: 0.5em;
     color: $stats-white;
-}
 
-#contentLeft ul#leftNavigation.master li.main-logo a{
-  padding: 0.4em 0.3em 0.3em 0em;
+    img {
+      width: 55%;
+      float: left;
+      margin-left: 0.26em;
+    }
 }
 
 
@@ -285,8 +287,10 @@ li.main-logo a i.fa.fa-bar-chart.leftNavIcon {
   box-shadow:         -1px 2px 4px 0px rgba(50, 50, 48, 0.55);
 
   // Horizontal Nav Title Placement
-  h5 {
+  h3 {
     display: inline-block;
+    padding-left: 0.5em;
+    line-height: 25%;
   }
 
   //Actions Icon
