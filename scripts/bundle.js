@@ -11187,7 +11187,6 @@ exports.cm = function(){
 			$('select').material_select();
 
 			// Animsition Page Transition effects
-	
 			$("#cardWrapper").animsition({
 				inClass: 'fade-in',
 				outClass: 'rotate-out',
@@ -11227,6 +11226,13 @@ exports.cm = function(){
 				$('.button-collapse').sideNav();
 				$('.side-nav').css('display', 'block');
 			}
+
+			$('#leftNavigation li ').click(function(e){
+				e.preventDefault();
+				console.log('working');
+			    $('#leftNavigation').addClass('active');
+			});
+
 
 		};
 
