@@ -255,7 +255,7 @@ h6 {
 }
 
 
-//Original component used them in it's css, thus the use of an Id. 
+//Original component used them in it's css, so we have the use of an Id. 
 #leftNavigation.master li.main-logo a {
   border-bottom: none;
   font-size: 1.2em;
@@ -265,6 +265,23 @@ h6 {
   color: #efefef;
   font-style: italic;
 }
+
+//Side menu active state 
+#leftNavigation li.active a.animsition-link i.fa.fa-angle-down {
+  transform: translateX(-1em) rotate(90deg);
+  font-weight: bold;
+}
+#leftNavigation li.active a.animsition-link {
+  color: $stats-orange !important;
+}
+
+#leftNavigation.master li:hover a {
+  color: $stats-orange !important;
+}
+
+
+
+
 
 li.main-logo a i.fa.fa-bar-chart.leftNavIcon {
   margin-top: .35em;
@@ -447,6 +464,8 @@ div.nav-horizontal i:nth-child(2) {
   }
 
 }
+
+
 
 
 

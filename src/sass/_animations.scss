@@ -4,7 +4,7 @@
 // Moving Arrows on Side Nav
 #leftNavigation.master li:hover a i.fa.fa-angle-down {
 	font-weight: 800 !important;
-	transition: transform 0.4s;
+	transition: transform 0.3s;
 	transform: translateX(-1em) rotate(90deg);
 }
 
