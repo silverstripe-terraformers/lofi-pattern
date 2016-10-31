@@ -11190,7 +11190,7 @@ exports.cm = function(){
 			$("#cardWrapper").animsition({
 				inClass: 'fade-in',
 				outClass: 'rotate-out',
-				inDuration: 1800,
+				inDuration: 600,
 				outDuration: 800,
 				linkElement: '.animsition-link',
 				// e.g. linkElement: 'a:not([target="_blank"]):not([href^=#])'
@@ -11226,12 +11226,6 @@ exports.cm = function(){
 				$('.button-collapse').sideNav();
 				$('.side-nav').css('display', 'block');
 			}
-
-			$('#leftNavigation li ').click(function(e){
-				e.preventDefault();
-				console.log('working');
-			    $('#leftNavigation').addClass('active');
-			});
 
 
 		};
