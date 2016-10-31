@@ -2,10 +2,9 @@
 // Imports
 
 // Materialize Imports
-@import 'variables';
-@import "materialize-sass/components/mixins";
-@import "materialize-sass/components/color";
-@import "materialize-sass/components/variables";
+@import 'brand-variables';
+@import "materialize-sass/materialize";
+
 
 //Material Icons && Fonts
 @import "material-icons";
