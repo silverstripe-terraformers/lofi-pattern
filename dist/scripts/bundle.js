@@ -11132,9 +11132,6 @@ module.exports = exports["default"];
 //Namespace pattern
 var namespace = require('./namespace.js');
 
-// Left vertical navigation
-var sideNavigation = require('./sidenav.js');
-
 //Require HighCharts
 var Highcharts = require('highcharts');
 
@@ -11170,10 +11167,6 @@ exports.cm = function(){
 		// All initialize UI invocations
 		UI.init = function(){
 
-			//Initialize side navigation
-			sideNavigation.sn();
-			$('#leftNavigation').ssdVerticalNavigation();
-
 			//Close Button For Mobile Menu
 			$('#closer').click(function(event){
 				event.preventDefault();
@@ -11189,7 +11182,7 @@ exports.cm = function(){
 			// Animsition Page Transition effects
 			$("#cardWrapper").animsition({
 				inClass: 'fade-in',
-				outClass: 'rotate-out',
+				outClass: 'fade-out',
 				inDuration: 600,
 				outDuration: 800,
 				linkElement: '.animsition-link',
@@ -11264,7 +11257,7 @@ exports.cm = function(){
 
 
 }; //exports.cm ends
-},{"./namespace.js":11,"./sidenav.js":12,"animsition":1,"highcharts":2,"highcharts/modules/exporting":3}],10:[function(require,module,exports){
+},{"./namespace.js":11,"animsition":1,"highcharts":2,"highcharts/modules/exporting":3}],10:[function(require,module,exports){
 // All Imports
 //jQuery
 $ = jQuery = require('jquery');
@@ -11319,79 +11312,4 @@ exports.nm = function(){
 	return UI;
 
 };
-},{}],12:[function(require,module,exports){
-exports.sn = function(){
-
-    $.fn.ssdVerticalNavigation = function(options) {
-
-        // "use strict";
-
-        var settings = $.extend({
-
-            classMaster : 'master',
-            classActive : 'active',
-            classClickable : 'clickable'
-
-        }, options);
-
-
-        function _leftNavigationActiveMain(thisLi) {
-
-            // "use strict";
-
-            thisLi
-                .toggleClass(settings.classActive)
-                .siblings()
-                .removeClass(settings.classActive);
-
-        }
-
-
-        function _leftNavigationClick(thisParentUl, thisLi, event) {
-
-            // "use strict";
-
-            if (thisParentUl.hasClass(settings.classMaster) && ! thisLi.hasClass(settings.classClickable)) {
-
-                // event.preventDefault();
-                event.stopPropagation();
-
-                _leftNavigationActiveMain(thisLi);
-
-            }
-
-        }
-
-
-        return this.each(function() {
-
-            // "use strict";
-
-            $(this)
-                .addClass(settings.classMaster)
-                .on('click',  'li a', function(event) {
-
-                try {
-
-                    var thisA = $(this),
-                        thisLi = thisA.parent('li'),
-                        thisParentUl = thisLi.parent('ul');
-
-                    _leftNavigationClick(thisParentUl, thisLi, event);
-
-                } catch (errorMessage) {
-
-                    console.log(errorMessage);
-
-                }
-
-            });
-
-        });
-
-
-    };
-
-};
-
 },{}]},{},[10]);

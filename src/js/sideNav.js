@@ -47,8 +47,8 @@ exports.sn = function(){
 
             $(this)
                 .addClass(settings.classMaster)
-                .on('click',  'li a', function(event) {
-
+                .on('hover',  'li a', function(event) {
+                    console.log('aa');
                 try {
 
                     var thisA = $(this),

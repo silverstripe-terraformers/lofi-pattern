@@ -2,7 +2,7 @@
 
 // Targeting navigation list items only for this hover effect. 
 // Moving Arrows on Side Nav
-#leftNavigation.master li:hover a i.fa.fa-angle-down {
+#leftNavigation li:hover a i.fa.fa-angle-down {
 	font-weight: 800 !important;
 	transition: transform 0.3s;
 	transform: translateX(-1em) rotate(90deg);

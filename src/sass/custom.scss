@@ -79,13 +79,10 @@ nav {
 	.yellow {background-color: $stats-yellow;}
 	.green {background-color: $stats-green;}
 	.grey {background-color: $stats-grey;}
-	
 }
 
-// Materialize Overrides
-// Input Focus Border Bottom Color 
-input[type="search"]:focus:not([readonly]), 
-textarea.materialize-textarea:focus:not([readonly]) {
-    border-bottom: none;
+.high-charts {
+	min-width: 80%; 
+	height: 400px; 
+	margin: 0 auto;
 }
-

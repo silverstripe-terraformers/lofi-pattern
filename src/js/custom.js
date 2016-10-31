@@ -1,9 +1,6 @@
 //Namespace pattern
 var namespace = require('./namespace.js');
 
-// Left vertical navigation
-var sideNavigation = require('./sidenav.js');
-
 //Require HighCharts
 var Highcharts = require('highcharts');
 
@@ -39,10 +36,6 @@ exports.cm = function(){
 		// All initialize UI invocations
 		UI.init = function(){
 
-			//Initialize side navigation
-			sideNavigation.sn();
-			$('#leftNavigation').ssdVerticalNavigation();
-
 			//Close Button For Mobile Menu
 			$('#closer').click(function(event){
 				event.preventDefault();
@@ -58,7 +51,7 @@ exports.cm = function(){
 			// Animsition Page Transition effects
 			$("#cardWrapper").animsition({
 				inClass: 'fade-in',
-				outClass: 'rotate-out',
+				outClass: 'fade-out',
 				inDuration: 600,
 				outDuration: 800,
 				linkElement: '.animsition-link',
