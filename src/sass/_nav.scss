@@ -79,7 +79,7 @@ h6 {
 
 
 
-#leftNavigation {
+.left-navigation {
 
   margin: 0rem 0;
 
@@ -140,11 +140,6 @@ h6 {
 
     ul {
 
-      display: none;
-
-      margin: 0;
-      background-color: $navigation-sub-bg;
-
       li {
 
         a {
@@ -177,22 +172,6 @@ h6 {
 
     }
 
-    &.active {
-
-      > a {
-
-        color: $navigation-color-active;
-
-      }
-
-      ul {
-
-        display: block;
-
-      }
-
-    }
-
   }
 
   > li {
@@ -213,13 +192,13 @@ h6 {
 }
 
 //Left Nav Separator
-#leftNavigation.master li.split-marker{
+.left-navigation li.split-marker{
   margin-bottom: 3.5em;
   border-bottom: none;
 }
 
 //Menu Social Icons
-#leftNavigation.master li.social-menu {
+.left-navigation li.social-menu {
   margin-top: 2em;
   padding-left: 0.2em;
 
@@ -256,7 +235,7 @@ h6 {
 
 
 //Original component used them in it's css, so we have the use of an Id. 
-#leftNavigation.master li.main-logo a {
+.left-navigation.master li.main-logo a {
   border-bottom: none;
   font-size: 1.2em;
   padding-left: 0em;
@@ -267,15 +246,15 @@ h6 {
 }
 
 //Side menu active state 
-#leftNavigation li.active a.animsition-link i.fa.fa-angle-down {
+.left-navigation li.active a.animsition-link i.fa.fa-angle-down {
   transform: translateX(-1em) rotate(90deg);
   font-weight: bold;
 }
-#leftNavigation li.active a.animsition-link {
+.left-navigation li.active a.animsition-link {
   color: $stats-orange !important;
 }
 
-#leftNavigation.master li:hover a {
+.left-navigation li:hover a {
   color: $stats-orange !important;
 }
 
@@ -411,6 +390,104 @@ div.nav-horizontal i:nth-child(2) {
   margin-right: 0.45em;
 }
 
+
+
+
+/** =======================
+ * Contenedor Principal
+ ===========================*/
+
+.left-navigation ul {
+    list-style-type: none;   
+}
+
+.accordion {
+  width: 100%;
+  max-width: 360px;
+  margin: 30px auto 20px;
+  background: #FFF;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.accordion .link {
+  cursor: pointer;
+  display: block;
+  padding: 15px 15px 15px 42px;
+  color: #4D4D4D;
+  font-size: 14px;
+  font-weight: 700;
+  border-bottom: 1px solid #CCC;
+  position: relative;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li:last-child .link { border-bottom: 0; }
+
+.accordion li i {
+  position: absolute;
+  top: 16px;
+  left: 12px;
+  font-size: 18px;
+  color: #595959;
+  -webkit-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.accordion li i.fa-chevron-down {
+  right: 12px;
+  left: auto;
+  font-size: 16px;
+}
+
+.accordion li.open .link { color: #b63b4d; }
+
+.accordion li.open i { color: #b63b4d; }
+
+.accordion li.open i.fa-chevron-down {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/**
+ * Submenu
+ -----------------------------*/
+
+
+.submenu {
+  display: none;
+  background: #444359;
+  font-size: 14px;
+}
+
+.submenu li { border-bottom: 1px solid #4b4a5e; }
+
+.submenu a {
+  display: block;
+  text-decoration: none;
+  color: #d9d9d9;
+  padding: 12px;
+  padding-left: 42px;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.submenu a:hover {
+  background: $stats-grey;
+  color: $stats-white;
+}
 
 // Mobile Side Nav
 .side-nav {
