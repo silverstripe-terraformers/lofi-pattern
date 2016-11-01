@@ -11,17 +11,7 @@ var materialize = require("materialize");
 //Custom js
 var customjs = require('./custom.js');
 
-//ALL CUSTOM JS
-/*
-Created: Sep 30, 2016 
-Author:  Jared Neems // Statistics New Zealand
-Pupose:  Front End UI Javascript For Initial Design, User Interface, 
-		 Responsive Testing and Presentation.
-Notes:   All node module export methods like 'cm()' below are renamed to shorthand. custom.js = cm
-         namespace.js  = nm. 
-Standards: 
-*/
-
+//Invoke all custom.js
 customjs.cm();
 
 

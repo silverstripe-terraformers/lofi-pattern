@@ -1,5 +1,14 @@
-// HTML Element Overrides for Default and Materialize
+// Resets
+body {
+	background-color: #efefef;
+}
 
+// Fonts
+html * {
+	font-family: 'Source Sans Pro';
+}
+
+// HTML Element Overrides for Default and Materialize
 table {
 	padding: 0.8em;
 
@@ -24,11 +33,4 @@ pre {
 }
 
 
-.card {
-	padding: 1em;
-}
 
-.nav-horizontal {
-	padding: 0.4em 0em 0em 1em;
-
-}

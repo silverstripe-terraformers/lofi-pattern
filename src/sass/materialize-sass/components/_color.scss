@@ -4,7 +4,7 @@
 //
 //}
 
-// Google Color Palette defined: http://www.google.com/design/spec/style/color.html
+// Google - Color Palette defined: http://www.google.com/design/spec/style/color.html
 $stats-grey:   #706f6e;
 $stats-orange: #ec6607;
 $stats-blue: #004f9e;
@@ -19,7 +19,7 @@ $stats-light-grey: #F2F2F2;
 $stats-black: #000;
 
 $materialize-red: (
-  "base":       #e4003a,
+  "base":       $stats-red,
   "lighten-5":  #fdeaeb,
   "lighten-4":  #f8c1c3,
   "lighten-3":  #f3989b,
@@ -32,7 +32,7 @@ $materialize-red: (
 );
 
 $red: (
-  "base":       #e4003a,
+  "base":       $stats-red,
   "lighten-5":  #FFEBEE,
   "lighten-4":  #FFCDD2,
   "lighten-3":  #EF9A9A,
@@ -66,7 +66,7 @@ $pink: (
 );
 
 $purple: (
-  "base":       #6f2282,
+  "base":       $stats-purple,
   "lighten-5":  #6f2282,
   "lighten-4":  #6f2282,
   "lighten-3":  #6f2282,
@@ -117,7 +117,7 @@ $indigo: (
 );
 
 $blue: (
-  "base":       #004f9e,
+  "base":       $stats-blue,
   "lighten-5":  #004f9e,
   "lighten-4":  #004f9e,
   "lighten-3":  #004f9e,
@@ -151,7 +151,7 @@ $light-blue: (
 );
 
 $cyan: (
-  "base":       #009bb4,
+  "base":       $stats-cyan,
   "lighten-5":  #009bb4,
   "lighten-4":  #009bb4,
   "lighten-3":  #009bb4,
@@ -185,7 +185,7 @@ $teal: (
 );
 
 $green: (
-  "base":       #51ae32,
+  "base":       $stats-green,
   "lighten-5":  #51ae32,
   "lighten-4":  #51ae32,
   "lighten-3":  #51ae32,
@@ -270,7 +270,7 @@ $amber: (
 );
 
 $orange: (
-  "base":       #ec6607,
+  "base":       $stats-orange,
   "lighten-5":  #fff3e0,
   "lighten-4":  #ffe0b2,
   "lighten-3":  #ffcc80,

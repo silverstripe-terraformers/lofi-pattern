@@ -16,65 +16,73 @@
 
   <!-- *** All Nav Content Begins -->
   <div class="row over-row">
-   <div class="col s2" id="leftNavContainer">
+   <div class="col s2 left-nav-container" id="leftNavContainer">
     <div id="contentLeft">
 
-      <ul id="leftNavigation">
-          <li class="main-logo">Stats Pattern Library </li>
-          <li><a href="colours.html">Colours<i class="fa fa-angle-down leftNavIcon"></i></a></li>
-          <li class="active">
-              <a href="typography.html">Typography<i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li class="active">
-              <a href="grid.html">Grid<i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li>
-              <a href="cards.html">Cards <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li class="active">
-              <a href="#">Icons <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li>
-              <a href="#"> Form Elements <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li>
-              <a href="#"> Tables <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li>
-              <a href="#"> Navigation <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li>
-              <a href="#"> Lists <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li>
-              <a href="#"> Animations <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li>
-              <a href="#"> Media <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li>
-              <a href="#"> CSS Guidelines <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li class="split-marker">
-              <a href="#"> JS Guidelines <i class="fa fa-angle-down leftNavIcon"></i></a>
-          </li>
-          <li class="social-menu">
-            <i class="fa fa-twitter-square"></i>
-            <i class="fa fa-facebook-square"></i>
-            <i class="fa fa-linkedin-square"></i>
-          </li>
-      </ul>
+    <ul id="leftNavigation">
+        <li class="main-logo"><img src="img/logo-black.png" alt=""></li>
+        <li><a href="colours.html" class="animsition-link"> Colours<i class="fa fa-angle-down leftNavIcon"></i></a></li>
+        <li>
+            <a href="typography.html" class="animsition-link"> Typography<i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li class="active">
+            <a href="grid.html" class="animsition-link"> Grid<i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="cards.html" class="animsition-link"> Cards <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="icons.html" class="animsition-link"> Icons <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="buttons.html" class="animsition-link"> Buttons <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="forms.html" class="animsition-link"> Forms <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="tables.html" class="animsition-link"> Tables <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="navigation.html" class="animsition-link"> Navigation <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="lists.html" class="animsition-link"> Lists <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="animations.html" class="animsition-link"> Animations <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="media.html" class="animsition-link"> Media <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="css.html" class="animsition-link"> CSS Guidelines <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li>
+            <a href="js.html" class="animsition-link"> JS Guidelines <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li class="split-marker">
+            <a href="js.html" class="animsition-link"> Demo Page <i class="fa fa-angle-down leftNavIcon"></i></a>
+        </li>
+        <li class="social-menu">
+          <i class="fa fa-twitter-square"></i>
+          <i class="fa fa-facebook-square"></i>
+          <i class="fa fa-linkedin-square"></i>
+        </li>
+    </ul>
 
     </div>
    </div> <!-- col Ends -->
 
   <!-- *** All Nav Content Ends-->
-    <div class="nav-horizontal" id="navHorizontal">
-    <div class="col s12">
-     <h5>Grid</h5> 
-    </div>
+  <div class="nav-horizontal" id="navHorizontal">
 
-    </div>
+     <a href="#" data-activates="slide-out" class="button-collapse btn-floating mob-menu btn-medium waves-effect waves-light orange" id="mobMenu" >
+       <i class="material-icons">menu</i>
+     </a>
+     
+
+   </div>
 
   <!-- Side Menu Nav Begins -->
     <ul id="slide-out" class="side-nav">
@@ -94,21 +102,21 @@
   <!-- ------------------------------------------------------------------------------------------->
 
   <!-- Card Content Begins -->
-      <div class="col s10 card-wrapper" id="cardWrapper"> <!-- Offset Column -->
-
+      <div class="col s12 m12 l10 card-wrapper animsition" id="cardWrapper"> <!-- Offset Column -->
           <div class="row"> 
-
             <div class= "col s12">
 
-              <div class="card">
-                <h5>Summary</h5>
-                <p>
-                  The grid is based on a system of <b>3 breakpoints:</b> <b>Desktop</b>, <b>Tablet</b> and <b>Mobile</b>.
-                </p>
-              </div>
+              <h5>Summary</h5>
 
               <div class="card">
-                <h5>Desktop</h5> 
+                <p>
+                  The grid is based on a system of <b>3 breakpoints:</b> <b>Desktop</b>, 
+                  <b>Tablet</b> and <b>Mobile</b>.
+                </p>
+              </div>
+              
+            <h5>Desktop</h5> 
+              <div class="card">
                 <p>
                   Desktop is a 4 card layout from left to right with one <b>.row class</b> div containing all cards. The <b>.card class</b> is the immediate child of the Materialize.css <b>"col"</b> class div: <b>class="col l3 m6 s12"</b>. Actual code example <a href="#code">here</a>, re-size screen to see breakpoint demonstration.   
                 </p>
@@ -116,7 +124,7 @@
 
             </div> <!-- col ends -->
           
-          <div class="desktop-wrapper" style="border: 1px solid #C1C1C1; border-radius: 6px;">
+          <div class="desktop-wrapper" style="">
 
             <div class="col l3 m6 s12">
               <div class="card">
@@ -168,14 +176,14 @@
 
           <div class="row">
             <div class="col s12">
+            <h5>Tablet</h5>
               <div class="card">
-                <h5>Tablet</h5>
                 <p>The Tablet breakpoint is a 2 card layout from left to right with one row class containing all cards. A 4 card row example can be seen below. Display example only.</p>
               </div>
             </div>
           
           <!-- Tablet Offset Begins -->
-          <div class="col l6 offset-l3" style="border: 1px solid #C1C1C1; border-radius: 6px;">
+          <div class="col l6 offset-l3" style="border-radius: 6px;">
             
             <div class="col l6 m6 s12">
               <div class="card">
@@ -239,13 +247,13 @@
 
           <div class="row">
             <div class="col s12">
+            <h5>Mobile</h5>
               <div class="card">
-                <h5>Mobile</h5>
-                <p>Mobile is a 1 card layout from left to right with one row class containing all cards. Lower cards will be accessible via a scroll event. A 4 card row example can be seen below. Display example only.</p>
+                <p>A single card layout from left to right with one row class containing all cards. Lower cards will be accessible via a scroll event. A 4 card row example can be seen below. Display example only.</p>
               </div>        
             </div>
           
-          <div class="col l3 offset-l4" style="margin-left: 38%; border: 1px solid #C1C1C1; border-radius: 6px;">
+          <div class="col l3 offset-l4" style="margin-left: 38%;">
 
             <div class="col l12 m12 s12">
               <div class="card">
@@ -307,16 +315,19 @@
 
           </div> <!-- row ends -->
 
-          <div class="row">
-            <div class="col s12">
-              <a href="" name="code"></a>
-              <h5>HTML</h5>              
-            </div>
+        <div class="row">
+
+          <div class="col s12">
+          <a href="" name="code"></a>
+          <h5>HTML</h5>  
+          </div>
           
           <!-- Code Section -->
+          <div class="col s12">
+            
            <pre>
              <xmp>
-            
+    
             <div class="row">
               
               <div class="col l3 m6 s12">
@@ -380,8 +391,9 @@
              </xmp>
            </pre>
            <!-- Code Section Ends -->
+          </div> <!-- col ends -->
 
-          </div> <!-- row ends -->
+        </div> <!-- row ends -->
 
        </div> <!-- col 10 offset Ends -->
     </div>  <!-- over-row Ends -->

@@ -23,7 +23,12 @@ var config = {
       		'node_modules/bootstrap/dist/css/bootstrap.min.css',
       		'node_modules/bootstrap/dist/css/bootstrap-theme.min.css'
     	],
-    	sass: 'src/sass/*.scss',
+    	sass:[
+      		'src/sass/*.scss',
+      		'src/sass/materialize-sass/*.scss',
+      		'src/sass/materialize-sass/components/*.scss',
+      		'src/sass/materialize-sass/components/forms/*.scss'
+    	],
 		dist: './dist',
 		mainJs: './src/js/main.js'
 	}
@@ -40,7 +45,7 @@ gulp.task('connect', function() {
 });
 
 gulp.task('open', ['connect'], function() {
-	gulp.src('dist/index.html')
+	gulp.src('dist/colours.html')
 		.pipe(open({ uri: config.devBaseUrl + ':' + config.port + '/'}));
 });
 

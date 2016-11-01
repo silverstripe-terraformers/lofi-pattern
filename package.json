@@ -24,6 +24,7 @@
   "author": "Cory House",
   "license": "ISC",
   "dependencies": {
+    "animsition": "^4.0.2",
     "bootstrap": "^3.3.5",
     "browserify": "^11.0.1",
     "browserify-shim": "^3.8.12",
@@ -41,6 +42,7 @@
     "gulp-open": "^1.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
+    "highcharts": "5.0.2",
     "materialize-css": "latest",
     "jquery": "^2.1.4",
     "pickadate": "^3.5.6",
