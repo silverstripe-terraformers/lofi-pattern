@@ -11139,7 +11139,6 @@ var Highcharts = require('highcharts');
 var pageAnimation = require('animsition');
 
 
-
 //ALL CUSTOM JS
 /*
 Created: Sep 30, 2016 
@@ -11179,7 +11178,7 @@ exports.cm = function(){
 			//Materialize Setup for check boxes. 
 			$('select').material_select();
 
-			// Animsition Page Transition effects
+			// Initialize Animsition Page Transition effects
 			$("#cardWrapper").animsition({
 				inClass: 'fade-in',
 				outClass: 'fade-out',
@@ -11220,8 +11219,41 @@ exports.cm = function(){
 				$('.side-nav').css('display', 'block');
 			}
 
+			//Accordian menu effect for desktop side nav
+			$(function() {
+				console.log('b');
 
-		};
+				var Accordion = function(el, multiple) {
+					console.log('a');
+					this.el = el || {};
+					this.multiple = multiple || false;
+
+					// Variables privadas
+					var links = this.el.find('.active');
+					// Evento
+					links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown);
+				};	
+
+				Accordion.prototype.dropdown = function(e) {
+					console.log('going');
+					var $el = e.data.el;
+						$this = $(this);
+						$next = $this.next();
+
+					$next.slideToggle();
+					$this.parent().toggleClass('open');
+
+					if (!e.data.multiple) {
+						$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
+					}
+				};	
+
+				var accordion = new Accordion($('#accordion'), false);
+
+			}); // Accodian menu effect iffe ends
+
+
+		}; //UI.menus end
 
 		//Highcharts functionality 
 		UI.charts = function(){
