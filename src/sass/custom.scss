@@ -12,33 +12,12 @@
 @import 'animations';
 @import 'overrides.scss';
 @import 'page-animation.scss';
+@import 'cards.scss';
 
 //Normal Sass Imports
 @import 'nav';
 @import 'media';
 @import 'elements';
-
-
-// CARD RESETS
-// Materialize Card Link Override
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating)  {
-	color: #9C9C9C;
-}
-
-.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover  {
-	color: #000;
-}
-
-.card .card-title {
-    font-size: 18px;
-    font-weight: 300;
-}
-
-.card {
-	padding: 1em;
-	margin: 1.8em 0em 1.8em 0em;
-}
-
 
 //Div around all card content
 .card-wrapper {
@@ -85,4 +64,9 @@ nav {
 	min-width: 80%; 
 	height: 400px; 
 	margin: 0 auto;
+}
+
+.page-header {
+	border-bottom: 1px solid $stats-medium-grey;
+	padding-bottom: 0.8em;
 }

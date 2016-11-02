@@ -1,0 +1,102 @@
+// CARD RESETS
+
+// Font Resets For Within cards
+.card {
+	h4{margin-bottom: 1em;}
+}
+
+
+// Materialize Card Link Override
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating)  {
+	color: #9C9C9C;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-floating):hover  {
+	color: #000;
+}
+
+.card .card-title {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.card {
+	padding: 1em;
+	margin: 1.8em 0em 1.8em 0em;
+}
+
+// Padding fix for cards with content 
+// position relative on outer parent card div to allow for sticky bottom for card-actions
+.card.condensed, .card.normal {
+	padding: 0em;
+	position: relative;
+}
+
+.card.normal {
+	min-height: 44em;
+	max-height: 44em;
+	clear: left;
+}
+
+.card.condensed.no-visual, .card.condensed {
+	min-height: 34em;
+	max-height: 34em;
+	clear: left;
+}
+
+// Card Sections
+.icons-panel {
+	padding: 20px;
+	border-bottom: 1px solid rgba(160, 160, 160, 0.2)
+}
+
+.icons-panel:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
+.icons-panel i {
+	display: inline-block;
+	color: $stats-medium-grey;
+}
+
+.card-media {
+	min-height: 14em;
+	background-color: $stats-medium-grey;
+}
+
+// Override for paragraph margin. Date title only.
+.card .card-content p.date {
+	margin-bottom: 0.5em;
+}
+
+
+.card.tab.normal .card-media {
+	margin-top: 1em;
+}
+
+
+
+.card.condensed div.card-action, .card.normal div.card-action {
+	position:absolute;
+	bottom:0;
+	width: 100%;
+}
+
+// Link Button Resets
+.icons-panel a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+	color: $stats-medium-grey;
+} 
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    color: $stats-orange;
+    font-weight: 600;
+}
+
+.icons-panel .card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating), 
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-floating) {
+    margin-right: 20px;
+    text-transform: uppercase;
+    transition: color 0.3s ease 0s;
+}

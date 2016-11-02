@@ -9,3 +9,16 @@ textarea.materialize-textarea:focus:not([readonly]) {
 i.right {
 	margin-right: 0.5em;
 }
+
+.tabs {
+	margin-top: 0.5em;
+}
+
+.tabs .tab a {
+    color: $stats-orange;
+    height: 100%;
+    overflow: hidden;
+    transition: color 0.28s ease 0s;
+    width: 100%;
+    font-weight: 600;
+}
