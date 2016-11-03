@@ -80,6 +80,7 @@ h6 {
 
   width: 80%;
   margin: 0 auto;
+  max-height: 100%;
 
   &, li ul {
 
@@ -169,8 +170,8 @@ h6 {
 
   //Social Icons
   i {
-    font-size: 1.6em;
-    margin: 0.1em;
+    font-size: 2em;
+    margin: 0.4em;
     color: $stats-grey;
     opacity: 0.6;
   }
@@ -214,11 +215,12 @@ h6 {
 }
 
 //Side menu active state 
-.left-navigation li.active a.animsition-link i.fa.fa-angle-down {
+.left-navigation li.active a i.fa.fa-angle-down {
   transform: translateX(-1em) rotate(90deg);
   font-weight: bold;
 }
-.left-navigation li.active a.animsition-link {
+
+.left-navigation li.active a {
   color: $stats-orange ;
 }
 
@@ -296,8 +298,28 @@ li.main-logo a i.fa.fa-bar-chart.leftNavIcon {
     width: 16em
   }
 
-
 } //nav horizontal
+
+.icon-box {
+  i {
+    color: $stats-medium-grey;
+  }
+
+.search-box {
+  i {
+    color: $stats-medium-grey;
+  }
+  input {
+    color: $stats-medium-grey;
+  }
+
+  i.material-icons {
+    color: $stats-medium-grey;
+  }
+
+}
+
+}
 
 //Close button for mobile menu
 #closer.material-icons.closer {
