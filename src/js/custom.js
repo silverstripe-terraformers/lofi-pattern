@@ -7,6 +7,9 @@ var Highcharts = require('highcharts');
 //Page animation transitions
 var pageAnimation = require('animsition');
 
+// Metismenu js
+var metis = require('metismenu');
+
 
 //ALL CUSTOM JS
 /*
@@ -88,44 +91,16 @@ exports.cm = function(){
 				$('.side-nav').css('display', 'block');
 			}
 
-			//Accordian menu effect for desktop side nav
-			$(function() {
-				console.log('b');
-
-				var Accordion = function(el, multiple) {
-					console.log('a');
-					this.el = el || {};
-					this.multiple = multiple || false;
-
-					// Variables privadas
-					var links = this.el.find('.active');
-					// Evento
-					links.on('click', {el: this.el, multiple: this.multiple}, this.dropdown);
-				};	
-
-				Accordion.prototype.dropdown = function(e) {
-					console.log('going');
-					var $el = e.data.el;
-						$this = $(this);
-						$next = $this.next();
-
-					$next.slideToggle();
-					$this.parent().toggleClass('open');
-
-					if (!e.data.multiple) {
-						$el.find('.submenu').not($next).slideUp().parent().removeClass('open');
-					}
-				};	
-
-				var accordion = new Accordion($('#accordion'), false);
-
-			}); // Accodian menu effect iffe ends
+			$(function () {
+			  $('#sideMenu').metisMenu();
+			});
 
 
 		}; //UI.menus end
 
 		//Highcharts functionality 
 		UI.charts = function(){
+
 			// Load module after Highcharts is loaded
 			require('highcharts/modules/exporting')(Highcharts);
 

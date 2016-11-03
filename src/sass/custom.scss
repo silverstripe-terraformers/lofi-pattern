@@ -70,3 +70,22 @@ nav {
 	border-bottom: 1px solid $stats-medium-grey;
 	padding-bottom: 0.8em;
 }
+
+.margin-box {
+	border-left: 6px solid $stats-orange;
+	padding-left: 1em;
+	list-style: none;
+	margin: 3em 0 4em 0;
+
+	p {
+		font-size: 1em;
+		padding-bottom: 0.5em;
+	}
+
+	li {
+		color: $stats-orange;
+		padding-bottom: 0.3em;
+		padding-top: 0.3em;
+		font-size: 1.1em;
+	}
+}

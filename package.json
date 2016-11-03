@@ -44,6 +44,7 @@
     "gulp-sass": "^2.0.4",
     "highcharts": "5.0.2",
     "materialize-css": "latest",
+    "metismenu": "2.5.2",
     "jquery": "^2.1.4",
     "pickadate": "^3.5.6",
     "react": "^0.13.3",

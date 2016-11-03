@@ -22,7 +22,6 @@ $navigation-sub-border-color : lighten($navigation-sub-bg, 7%);
 $navigation-sub-color-active : #fff;
 
 
-
 body {
 
   background-color: $body-bg;
@@ -77,11 +76,10 @@ h6 {
 
 }
 
-
-
 .left-navigation {
 
-  margin: 0rem 0;
+  width: 80%;
+  margin: 0 auto;
 
   &, li ul {
 
@@ -138,41 +136,7 @@ h6 {
 
     }
 
-    ul {
-
-      li {
-
-        a {
-
-          border-bottom: solid 1px $navigation-sub-border-color;
-
-        }
-
-        &:last-child {
-
-          a {
-
-            border-bottom: none;
-
-          }
-
-        }
-
-        &.active {
-
-          a {
-
-            color: $navigation-sub-color-active;
-
-          }
-
-        }
-
-      }
-
-    }
-
-  }
+  } //li ends
 
   > li {
 
@@ -187,6 +151,7 @@ h6 {
   //Angle Down Arrows
   a i.fa.fa-angle-down.leftNavIcon{
     color: $stats-orange;
+    font-weight: 600;
   }
 
 }
@@ -214,8 +179,9 @@ h6 {
 
 //Logo Area In Side Vertical Nav
 .main-logo {
+
     width: 100%;
-    height: 4.8em;
+    height: 9em;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: $stats-black;
@@ -223,14 +189,16 @@ h6 {
     font-size: 1.4em;
     font-weight: 300;
     text-align: center;
-    padding-top: 0.5em;
+    padding-top: 2em;
     color: $stats-white;
+    display: inline-block;
 
     img {
-      width: 50%;
+      width: 10.5em;
       float: left;
-      margin-left: 0.26em;
+      margin: 0em 0em 0em 0.26em;
     }
+
 }
 
 
@@ -251,21 +219,21 @@ h6 {
   font-weight: bold;
 }
 .left-navigation li.active a.animsition-link {
+  color: $stats-orange ;
+}
+
+.left-navigation li:hover > a, .left-navigation li ul li:hover > a {
   color: $stats-orange !important;
 }
 
-.left-navigation li:hover a {
-  color: $stats-orange !important;
+.left-navigation li ul li a {
+  color: $stats-medium-grey !important;
+  padding-left: 2.2em;
 }
-
-
-
-
 
 li.main-logo a i.fa.fa-bar-chart.leftNavIcon {
   margin-top: .35em;
 }
-
 
 // All Horizontal Nav CSS
 .nav-horizontal {
@@ -390,105 +358,6 @@ div.nav-horizontal i:nth-child(2) {
   margin-right: 0.45em;
 }
 
-
-
-
-/** =======================
- * Contenedor Principal
- ===========================*/
-
-.left-navigation ul {
-    list-style-type: none;   
-}
-
-.accordion {
-  width: 100%;
-  max-width: 360px;
-  margin: 30px auto 20px;
-  background: #FFF;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.accordion .link {
-  cursor: pointer;
-  display: block;
-  padding: 15px 15px 15px 42px;
-  color: #4D4D4D;
-  font-size: 14px;
-  font-weight: 700;
-  border-bottom: 1px solid #CCC;
-  position: relative;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.accordion li:last-child .link { border-bottom: 0; }
-
-.accordion li i {
-  position: absolute;
-  top: 16px;
-  left: 12px;
-  font-size: 18px;
-  color: #595959;
-  -webkit-transition: all 0.4s ease;
-  -o-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
-.accordion li i.fa-chevron-down {
-  right: 12px;
-  left: auto;
-  font-size: 16px;
-}
-
-.accordion li.open .link { color: #b63b4d; }
-
-.accordion li.open i { color: #b63b4d; }
-
-.accordion li.open i.fa-chevron-down {
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-/**
- * Submenu
- -----------------------------*/
-
-
-.submenu {
-  display: none;
-  background: #444359;
-  font-size: 14px;
-}
-
-.submenu li { border-bottom: 1px solid #4b4a5e; }
-
-.submenu a {
-  display: block;
-  text-decoration: none;
-  color: #d9d9d9;
-  padding: 12px;
-  padding-left: 42px;
-  -webkit-transition: all 0.25s ease;
-  -o-transition: all 0.25s ease;
-  transition: all 0.25s ease;
-}
-
-.submenu a:hover {
-  background: $stats-grey;
-  color: $stats-white;
-}
-
 // Mobile Side Nav
 .side-nav {
   display: none;
@@ -542,6 +411,106 @@ div.nav-horizontal i:nth-child(2) {
 
 }
 
+// Metis Menu css styles
+/*
+ * metismenu - v2.5.2
+ * A jQuery menu plugin
+ * https://github.com/onokumus/metisMenu#readme
+ *
+ * Made by Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)
+ * Under MIT License
+ */
+
+.metismenu .arrow {
+  float: right;
+  line-height: 1.42857;
+}
+*[dir="rtl"] .metismenu .arrow {
+  float: left;
+}
+
+/*
+ * Require Bootstrap
+ * https://github.com/twbs/bootstrap
+*/
+
+.metismenu .glyphicon.arrow:before {
+  content: "\e079";
+}
+.metismenu .active > a > .glyphicon.arrow:before {
+  content: "\e114";
+}
+
+/*
+ * Require Font-Awesome
+ * http://fortawesome.github.io/Font-Awesome/
+*/
+
+.metismenu .fa.arrow:before {
+  content: "\f104";
+}
+.metismenu .active > a > .fa.arrow:before {
+  content: "\f107";
+}
+
+/*
+ * Require Ionicons
+ * http://ionicons.com/
+*/
+
+.metismenu .ion.arrow:before {
+  content: "\f3d2"
+}
+.metismenu .active > a > .ion.arrow:before {
+  content: "\f3d0";
+}
+.metismenu .plus-times {
+  float: right;
+}
+*[dir="rtl"] .metismenu .plus-times {
+  float: left;
+}
+.metismenu .fa.plus-times:before {
+  content: "\f067";
+}
+.metismenu .active > a > .fa.plus-times {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.metismenu .plus-minus {
+  float: right;
+}
+*[dir="rtl"] .metismenu .plus-minus {
+  float: left;
+}
+.metismenu .fa.plus-minus:before {
+  content: "\f067";
+}
+.metismenu .active > a > .fa.plus-minus:before {
+  content: "\f068";
+}
+.metismenu .collapse {
+  display: none;
+}
+.metismenu .collapse.in {
+  display: block;
+}
+.metismenu .collapsing {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition-timing-function: ease;
+       -o-transition-timing-function: ease;
+          transition-timing-function: ease;
+  -webkit-transition-duration: .35s;
+       -o-transition-duration: .35s;
+          transition-duration: .35s;
+  -webkit-transition-property: height, visibility;
+  -o-transition-property: height, visibility;
+  transition-property: height, visibility;
+}
 
 
 
