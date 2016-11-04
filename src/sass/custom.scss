@@ -67,8 +67,27 @@ nav {
 }
 
 .page-header {
+	
 	border-bottom: 1px solid $stats-medium-grey;
-	padding-bottom: 0.8em;
+	padding-bottom: 1.8em;
+
+	h4 {
+		display: inline-block;
+		margin-bottom: 0em;
+	}
+
+	.filter-box {
+	  margin-top: 0em;
+	  display: inline-block;
+	  float: right;
+	}
+
+	.sort-box {
+	  margin-top: 0em;
+	  display: inline-block;
+	  float: right;
+	}
+
 }
 
 .margin-box {

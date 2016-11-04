@@ -1,9 +1,9 @@
 // Media Queries
 
-@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ 
+@media (min-width:320px) and (max-width: 480px) { /* smartphones, iPhone, portrait 480x320 phones */ 
 		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
 		  		color: green;
-		  	}
+		}
 
 		// Remove full screen side nav
 	  	.left-nav-container {
@@ -17,12 +17,16 @@
 	  	.mob-menu {
 	  		display: inline-block;
 	  	}
+
+	  	.icon-box i {
+	  		margin: 0.7em 0.4em 0em 0em;
+	  	}
 	  	
 }
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+@media (min-width:481px) and (max-width: 640px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
 		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
 		  		color: blue;
-		  	}
+		}
 
 	  	// Remove full screen side nav
 	  	.left-nav-container {
@@ -37,11 +41,16 @@
 	  		display: inline-block;
 	  	}
 
+	  	.icon-box i {
+	  		font-size: 1.5em;
+	  		margin: 0.9em 0.4em 0em 0em;
+	  	}
+
 }
-@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) and (max-width: 991px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
 		  		color: yellow;
-		  	}
+		}
 
 	  	// Remove full screen side nav
 	  	.left-nav-container {
@@ -60,7 +69,7 @@
 @media (min-width:992px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
 		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
 		  		color: red;
-		  	}
+		}
 
 	  	// Remove full screen side nav
 	  	.left-nav-container {
@@ -89,6 +98,10 @@
 	  	.mob-menu {
 	  		display: none;
 	  	}
+
+	  	.mob-remove {
+	  		display: none;
+	  	}
 }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ 
 		// Display full screen side nav
@@ -101,6 +114,10 @@
 	  	}
 
 		.mob-menu {
+			display: none;
+		}
+
+		.mob-remove {
 			display: none;
 		}
 }

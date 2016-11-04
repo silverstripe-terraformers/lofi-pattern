@@ -230,7 +230,7 @@ h6 {
 
 .left-navigation li ul li a {
   color: $stats-medium-grey !important;
-  padding-left: 2.2em;
+  padding-left: 1.7em;
 }
 
 li.main-logo a i.fa.fa-bar-chart.leftNavIcon {
@@ -298,28 +298,63 @@ li.main-logo a i.fa.fa-bar-chart.leftNavIcon {
     width: 16em
   }
 
+  .search-box {
+    margin-top: 1em; 
+    a {
+      display: inline-block;
+    }
+  }
+
+  .search-box i, 
+  .search-box input, 
+  .search-box label  {
+    color: $stats-medium-grey;
+
+  }
+  
+  .search-box input{
+    border-color: -moz-use-text-color -moz-use-text-color $stats-medium-grey;
+  }
+
 } //nav horizontal
 
+
+
+
 .icon-box {
-  i {
-    color: $stats-medium-grey;
+
+  float: right; 
+  margin-right: 1em;
+
+  a:first-child i {
+    margin-right: 0.8em !important;
   }
 
-.search-box {
   i {
+    display: inline-block;
+    float: right;
     color: $stats-medium-grey;
-  }
-  input {
-    color: $stats-medium-grey;
+    margin: 0.7em 1.4em 0em 0em;
   }
 
-  i.material-icons {
+  span {
     color: $stats-medium-grey;
+    display: inline-block;
+    float: right;
+    margin: 1.3em 0.7em 0em 0em;
+  }
+
+  i:hover {
+    color: $stats-orange;
+  }
+
+  span:hover {
+    color: $stats-orange;
   }
 
 }
 
-}
+
 
 //Close button for mobile menu
 #closer.material-icons.closer {
@@ -374,12 +409,6 @@ body {
   display: block;
 }
 
-
-div.nav-horizontal i:nth-child(2) {
-  float: right;
-  margin-right: 0.45em;
-}
-
 // Mobile Side Nav
 .side-nav {
   display: none;
@@ -396,7 +425,6 @@ div.nav-horizontal i:nth-child(2) {
   padding: 1em 0em 1em 0em;
   border-bottom: 1px solid #706f6e;
   display: block;
-
 }
 
 // Search Icon In Nav
