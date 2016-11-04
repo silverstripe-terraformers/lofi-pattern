@@ -9,7 +9,7 @@
   height: calc(100% + 60px);
   height: -moz-calc(100%); //Temporary Firefox Fix
   padding-bottom: 60px;
-  background-color: $sidenav-bg-color;
+  background-color: $stats-black;
   z-index: 999;
   backface-visibility: hidden;
   overflow-y: auto;
@@ -35,13 +35,15 @@
   li {
     float: none;
     line-height: $sidenav-item-height;
+    position: relative;
 
     &.active { background-color: rgba(0,0,0,.05); }
   }
 
   a {
-    color: $sidenav-font-color;
-    display: block;
+    color: $stats-white;
+    display: inline-block;
+    width: 85%;
     font-size: $sidenav-font-size;
     font-weight: 500;
     height: $sidenav-item-height;
@@ -56,7 +58,7 @@
 
     &.btn,
     &.btn-large,
-    &.btn-floating { color: $button-raised-color; }
+    &.btn-floating { color: $stats-orange; }
     &.btn-flat { color: $button-flat-color; }
 
     &.btn:hover,
@@ -67,11 +69,11 @@
   li > a > i,
   li > a > [class^="mdi-"], li > a > [class*="mdi-"],
   li > a > i.material-icons {
-    float: left;
+    float: right;
     line-height: $sidenav-item-height;
-    margin: 0 ($sidenav-padding * 2) 0 0;
+    margin: 0.2em ($sidenav-padding * 2) 0 0;
     width: $sidenav-item-height / 2;
-    color: rgba(0,0,0,.54);
+    color: $stats-white;
   }
 
   .divider {
@@ -199,7 +201,7 @@
 .side-nav.fixed .collapsible-body li.active {
   background-color: $primary-color;
   a {
-    color: $sidenav-bg-color;
+    color: $stats-orange;
   }
 }
 
@@ -213,6 +215,16 @@
   height: 120vh;
   background-color: rgba(0,0,0,.5);
   z-index: 997;
-
   will-change: opacity;
+}
+
+
+.side-nav div.mobile-close a.mobile-close {
+  width: 100%;
+}
+
+.side-nav li i.material-icons {
+  color: $stats-orange !important;
+  position: absolute;
+  top: 0.6em;
 }
