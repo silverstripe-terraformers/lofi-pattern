@@ -91,8 +91,21 @@ exports.cm = function(){
 				$('.side-nav').css('display', 'block');
 			}
 
+			//Desktop side menu functionality and plugin
 			$(function () {
-			  $('#sideMenu').metisMenu();
+
+			  //Targets the click event of the desktop submenu 
+			  //Adds active to clicked element.  
+			  $('.sub-menu li').on('click', function(){
+			  	$('.sub-menu li.active').removeClass('active');
+			  	$(this).closest('li').addClass('active');
+			  });
+
+			  //Plugin for desktop sidemenu for desktop and mobile.
+			  //sideMenu = desktop // slide-out = mobile 
+			  $('#sideMenu, #slide-out').metisMenu();
+
+
 			});
 
 

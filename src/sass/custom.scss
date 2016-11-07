@@ -89,6 +89,13 @@ nav {
 
 }
 
+.page-header:after { 
+   content: " ";
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
 .margin-box {
 	border-left: 6px solid $stats-orange;
 	padding-left: 1em;

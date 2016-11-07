@@ -10799,6 +10799,7 @@ var b=a(this).index();c(k,b,d),i.find("li").eq(b).find(":checkbox").prop("checke
             $(this._element).find('li.' + this._config.activeClass).has('ul').children('a').addClass('doubleTapToGo');
           }
           $(this._element).find('li').has('ul').children('a').on(Event.CLICK_DATA_API, function (e) {
+            console.log('tonea');
             var _this = $(this);
             var _parent = _this.parent('li');
             var _list = _parent.children('ul');
@@ -11599,8 +11600,21 @@ exports.cm = function(){
 				$('.side-nav').css('display', 'block');
 			}
 
+			//Desktop side menu functionality and plugin
 			$(function () {
-			  $('#sideMenu').metisMenu();
+
+			  //Targets the click event of the desktop submenu 
+			  //Adds active to clicked element.  
+			  $('.sub-menu li').on('click', function(){
+			  	$('.sub-menu li.active').removeClass('active');
+			  	$(this).closest('li').addClass('active');
+			  });
+
+			  //Plugin for desktop sidemenu for desktop and mobile.
+			  //sideMenu = desktop // slide-out = mobile 
+			  $('#sideMenu, #slide-out').metisMenu();
+
+
 			});
 
 

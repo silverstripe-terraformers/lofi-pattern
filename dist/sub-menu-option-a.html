@@ -19,7 +19,7 @@
    <div class="col s2 left-nav-container" id="leftNavContainer">
     <div id="contentLeft">
 
-    <ul class="left-navigation">
+    <ul id="sideMenu" class="left-navigation metismenu">
         <li class="main-logo"><img src="img/logo-black.png" alt=""></li>
         <li><a href="colours.html" class="animsition-link"> Colours<i class="fa fa-angle-down leftNavIcon"></i></a></li>
         <li>
@@ -34,7 +34,7 @@
         <li>
             <a href="icons.html" class="animsition-link"> Icons <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
-        <li class="active">
+        <li>
             <a href="buttons.html" class="animsition-link"> Buttons <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
         <li>
@@ -43,9 +43,24 @@
         <li>
             <a href="tables.html" class="animsition-link"> Tables <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
-        <li>
-            <a href="navigation.html" class="animsition-link"> Navigation <i class="fa fa-angle-down leftNavIcon"></i></a>
+
+        <li class="active">
+            <a href="#" aria-expanded="false"class >Navigation 
+              <i class="fa fa-angle-down leftNavIcon"></i>
+            </a>
+            <ul aria-expanded="false" class="sub-menu">
+                <li>
+                    <a href="navigation.html" class="animsition-link link"> Option A</a>
+                </li>
+                <li>
+                    <a href="#" class="animsition-link link"> Option B</a>
+                </li>
+                <li>
+                    <a href="#" class="animsition-link link"> Option C</a>
+                </li>
+            </ul>
         </li>
+
         <li>
             <a href="lists.html" class="animsition-link"> Lists <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
@@ -75,29 +90,27 @@
    </div> <!-- col Ends -->
 
   <!-- *** All Nav Content Ends-->
-<div class="nav-horizontal" id="navHorizontal">
+  <div class="nav-horizontal" id="navHorizontal">
 
-  <div class="div col s3 m1 l1 mob-remove">
     <a href="#" data-activates="slide-out" class="button-collapse btn-floating mob-menu btn-medium waves-effect waves-light orange" id="mobMenu" >
-    <i class="material-icons">menu</i>
+      <i class="material-icons">menu</i>
     </a>
-  </div>
 
-  <div class="input-field col s3 search-box">
-    <i class="material-icons prefix">search</i>
-    <input id="icon_prefix" type="text" class="validate">
-    <label for="icon_prefix">Search</label>
-  </div>
- 
-  <div class="icon-box">
-    <a href=""><i class="material-icons prefix">expand_more</i></a>
-    <a href=""><span>John Smith</span></a>
-    <a href=""><i class="material-icons prefix">lens</i></a>
-    <a href=""><i class="material-icons prefix">mail_outline</i></a>
-    <a href=""><i class="material-icons prefix">add_alert</i></a>
-  </div>
+    <div class="input-field col s2 search-box">
+      <i class="material-icons prefix">search</i>
+      <input id="icon_prefix" type="text" class="validate">
+      <label for="icon_prefix">Search</label>
+    </div>
 
-</div>
+    <div class="icon-box" style="float: right; margin-right: 1em;">
+      <i class="material-icons prefix">expand_more</i>
+      <span>John Smith</span>
+      <i class="material-icons prefix">lens</i>
+      <i class="material-icons prefix">mail_outline</i>
+      <i class="material-icons prefix">add_alert</i>
+    </div>
+
+  </div>
 
   <!-- Side Menu Nav Begins -->
     <ul id="slide-out" class="side-nav">
@@ -120,11 +133,10 @@
       <div class="col s12 m12 l10 card-wrapper animsition" id="cardWrapper"> <!-- Offset Column -->
 
         <div class="row">
-        
+
           <div class="col s12">
             <div class="page-header">
-              <h2>Buttons</h2>
-              <h4>Subtitle</h4>
+              <h2>Option A</h2>
 
               <div class="input-field col s2 filter-box">
                  <select>
@@ -144,72 +156,10 @@
                  </select>
                </div>
             </div>
-          </div>
+          </div>  
 
-          <div class="col s6">
+          </div> <!-- row -->
 
-              <h5>Raised Buttons</h5>  
-
-          </div>
-
-          <div class="col s6">
-
-              <h5>Flat Buttons</h5>  
-
-          </div>
-
-          <div class="col s6">
-            <div class="card">
-              <a class="waves-effect waves-light btn">button</a>
-              <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
-              <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
-            </div>
-          </div> <!-- col ENDS -->
-
-          <div class="col s6">
-            <div class="card">
-              <a class="waves-effect waves-teal btn-flat">Hover This</a>
-            </div>
-          </div> <!-- col ENDS -->
-
-          <div class="col s6">
-
-              <h5>Large Buttons</h5>  
-
-          </div>
-
-          <div class="col s6">
-
-              <h5>Disabled Buttons</h5>  
-
-          </div>
-
-          <!-- Buttons Section -->
-          <div class="col s6">
-            <div class="card">
-
-              <a class="waves-effect waves-light btn-large">button</a>
-              <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
-              <a class="waves-effect waves-light btn-large"><i class="material-icons right">cloud</i>button</a>           
-                      
-            </div>
-          </div> <!-- col ENDS -->
-          <!-- Buttons Section Ends -->
-
-          <!-- Buttons Section -->
-          <div class="col s6">
-            <div class="card">
-              
-              <a class="btn-large disabled">Button</a>
-              <a class="btn disabled">Button</a>
-              <a class="btn-flat disabled">Button</a>
-              <a class="btn-floating disabled"><i class="material-icons">add</i></a>
-                      
-            </div>
-          </div> <!-- col ENDS -->
-          <!-- Buttons Section Ends -->
-
-          
           </div> <!-- row ends -->
        </div> <!-- col 10 offset Ends -->
     </div>  <!-- over-row Ends -->

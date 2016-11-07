@@ -190,12 +190,14 @@ h6 {
     font-size: 1.4em;
     font-weight: 300;
     text-align: center;
-    padding-top: 2em;
+    padding-top: 1em;
     color: $stats-white;
     display: inline-block;
+    margin-bottom: 2em;
 
     img {
-      width: 10.5em;
+      width: 90%;
+      display: inline-block;
       float: left;
       margin: 0em 0em 0em 0.26em;
     }
@@ -228,8 +230,13 @@ h6 {
   color: $stats-orange !important;
 }
 
-.left-navigation li ul li a {
-  color: $stats-medium-grey !important;
+#sideMenu.left-navigation.metismenu li.active ul.sub-menu li a {
+  color: $stats-medium-grey;
+  padding-left: 1.7em;
+}
+
+#sideMenu.left-navigation.metismenu li.active ul.sub-menu li.active a {
+  color: $stats-orange;
   padding-left: 1.7em;
 }
 
@@ -364,9 +371,24 @@ li.main-logo a i.fa.fa-bar-chart.leftNavIcon {
   margin-left: 5em;
 }
 
-html body div.row.over-row ul#slide-out.side-nav div.mobile-close a.mobile-close {
-  padding: 0.2em !important;
+#slide-out.side-nav div.mobile-close a.mobile-close {
+  padding: 0.6em !important;
+  display: inline-block;
+  width: 20%;
+  float: right;
+  border-bottom: none;
 }
+
+.mobile-close img {
+  width: 55%;
+  display: inline-block;
+
+}
+
+.mobile-close {
+  border-bottom: 1px solid $stats-logo-grey;
+}
+
 
 //Mobile Hamburger Menu Z index Fix
 a#mobMenu.button-collapse.btn-floating.mob-menu.btn-medium.red {
@@ -417,6 +439,15 @@ body {
 
 .mob-menu {
   display: none;
+}
+
+.side-nav li {
+  border-bottom: $stats-logo-grey 0.1em solid;
+}
+
+.side-nav li:first-child{
+  border-top: $stats-logo-grey 0.1em solid !important;  
+
 }
 
 

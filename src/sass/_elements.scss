@@ -39,5 +39,13 @@ hr {
 	color: $stats-light-grey;
 }
 
+a {
+   outline: 0;
+}
+
+a:hover, a:active, a:focus {
+  color: $stats-orange;
+}
+
 
 
