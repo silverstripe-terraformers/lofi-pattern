@@ -105,7 +105,6 @@ exports.cm = function(){
 			  //sideMenu = desktop // slide-out = mobile 
 			  $('#sideMenu, #slide-out').metisMenu();
 
-
 			});
 
 

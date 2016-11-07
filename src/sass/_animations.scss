@@ -8,7 +8,15 @@
 	transform: translateX(-1em) rotate(90deg);
 }
 
+.side-nav.metismenu li.active i.material-icons {
+	font-weight: 800;
+	color: yellow;
+}
 
-// Use these classes for animations:
-// .side-nav.metismenu li.active a.active
-// .side-nav.metismenu li.active i.material-icons
+.side-nav.metismenu li:hover i.material-icons, 
+.side-nav.metismenu li.active i.material-icons  {
+	transition: transform 0.3s;
+	transform: translateX(0em) rotate(90deg);
+}
+
+ // .side-nav.metismenu li.active a.active

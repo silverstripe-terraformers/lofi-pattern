@@ -155,7 +155,14 @@ h6 {
     font-weight: 600;
   }
 
+ } //left-navigation ends
+
+
+#contentLeft {
+  max-height: 100vh;
+  overflow: auto;
 }
+
 
 //Left Nav Separator
 .left-navigation li.split-marker{
@@ -182,7 +189,7 @@ h6 {
 .main-logo {
 
     width: 100%;
-    height: 9em;
+    height: 7.8em;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: $stats-black;
@@ -196,7 +203,7 @@ h6 {
     margin-bottom: 2em;
 
     img {
-      width: 90%;
+      width: 80%;
       display: inline-block;
       float: left;
       margin: 0em 0em 0em 0.26em;
@@ -389,6 +396,16 @@ li.main-logo a i.fa.fa-bar-chart.leftNavIcon {
   border-bottom: 1px solid $stats-logo-grey;
 }
 
+//Sub menu ul element within slide out mobile nav
+.sub-menu li a {
+  color: $stats-logo-grey;
+  padding-left: 2em;
+}
+
+.sub-menu li a:hover, 
+.sub-menu li a:focus  {
+  color: $stats-orange;
+}
 
 //Mobile Hamburger Menu Z index Fix
 a#mobMenu.button-collapse.btn-floating.mob-menu.btn-medium.red {
