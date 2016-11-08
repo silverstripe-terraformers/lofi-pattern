@@ -73,6 +73,64 @@ exports.cm = function(){
 				overlayParentElement : 'body'
 			});
 
+			var checkCards = function(){
+
+			var mobileClearFix = function(){
+
+				  	var testArray = [];
+
+				  	//Run a loop on all row divs/elements 
+				    $('.row').each(function(i, obj) {
+
+				    	//Look for rows that contain more 3 or more divs with m6 class (3 or more cards).
+				        if ($(this).children('.m6').length > 2){
+				        	var $capture = $(this).children('.m6');
+				        	//Add a special css media query class 'mobile-clearfix' that sets a min height of 48em on the first 2 
+				        	//divs in a row of 4 to balance out cards on tablet devices.
+				        	$capture.addClass('mobile-clearfix');
+				            
+				            //Below is a nested loop to check for card duplicates. If there are 3 or more cards we may have a situation
+				            //where the first 2 cards are of equal height (condensed && condensed || normal && normal). 
+				            //This loop checks to see if the first 2 cards in a row are equal. It then removes the mobile-clearfix class. 
+				            
+				            //Nested Loop .m6 check that runs within .row loop above:
+				            $capture.each(function(i, obj) {
+				            	//Extract 'condensed' and 'normal' class names from element
+				                var $classNames = $(this).children().context.firstElementChild.className.toString();
+				                //Resduce string for inspection and also to delete other css multiclasses
+								var updateString = $classNames.substring(0, 14);	
+								//Push string items to testing array			         
+				                testArray.push(updateString);
+
+				                //Check array items for equality, remove class, reset testArray
+				                var checkArray = function(){
+				                	if (testArray[0] === testArray[1]) {
+				                		$capture.removeClass('mobile-clearfix');
+				                	}
+				                	testArray = [];
+				                };
+
+				                // Only run checkArray function when 2 items are present within the array
+				                if (testArray.length > 1) {
+				                	checkArray();
+				                }
+				             
+				                //The return below will limit nested loop .m6 check to 2 iterations so only first 2 
+				                //cards are checked within each ".row" css will adjust and correct bottom margins 
+				                //for any 1 or 2 card rows.
+				                return i < 1;
+				            });
+
+				        } //if m6 card check ends
+
+				      }); //row each loop ends
+
+			}; //mobileClearFix Ends
+
+			mobileClearFix();
+
+	     }();
+
 		}; //init method ends
 
 		// Menus Functionality

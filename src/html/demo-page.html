@@ -578,7 +578,7 @@
     <!-- All Scripts -->
     <script src="scripts/bundle.js"></script>
     <script>
-      (function(){
+      // (function(){
 
         //check rows for 3 or more .m6 class children
         // function rowCheck(){
@@ -593,24 +593,32 @@
         // rowCheck();
 
 
-        function rowCheck(){
-          $('.row').each(function(i, obj) {
+      //   function mobileClearFix(tester){
+      //     $('.row').each(function(i, obj) {
+      //         if ($(this).children('.m6').length > 2){
 
-              if ($(this).children('.m6').length > 2){
+      //             var a = $(this).children();
 
-                  var a = $(this).children();
+      //           $(this).children('.m6').addClass('mobile-clearfix');
+      //         };
+      //     });  
+      //   } //mobileClearFix
 
-                
-                $(this).children('.m6').addClass('mobile-clearfix')
-              };
+      //   mobileClearFix();
 
-          });  
+      //   function duplicateTest(stringA, stringB){
+      //     $('.row').each(function(i, obj) {
 
-        }
+      //         var a = $(this).children('.m6');
+      //         if (a.length > 2) {
+      //           console.log(a);
+      //         };
+      //     });
+      //   }
 
-        rowCheck();
+      //   duplicateTest();
 
-      })();
+      // })();
     </script>
 
 
