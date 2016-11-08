@@ -188,7 +188,37 @@
              </div>
           </div>
 
-        </div>
+        </div> <!-- col s12 Ends -->
+
+      </div>
+
+
+      <div class="row">
+
+          <div class="col s12 m6 l3">
+            <div class="card condensed">
+              <div class="icons-panel">
+                  <i class="material-icons right">more_vert</i>
+                  <i class="material-icons right">arrow_drop_down_circle</i>
+                  <i class="material-icons right">star</i>
+              </div>
+              <div class="card-media">
+              </div>
+              <div class="card-content">
+                <h4>Title</h4>
+                <h6>Subheading</h6>
+              </div>
+              <div class="card-action">
+                  <a href="#">Action 1</a>
+                  <a href="#">Action 2</a>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- row ends -->
+
+
+      <div class="row">
 
           <div class="col s12 m6 l3">
             <div class="card normal">
@@ -253,7 +283,120 @@
             </div>
           </div>
 
-        </div> <!-- row ends --> 
+          <div class="col s12 m6 l3">
+            <div class="card normal">
+              <div class="icons-panel">
+                  <i class="material-icons right">more_vert</i>
+                  <i class="material-icons right">arrow_drop_down_circle</i>
+                  <i class="material-icons right">star</i>
+              </div>
+              <div class="card-media">
+              </div>
+              <div class="card-content">
+                <h4>Title</h4>
+                <h6>Subheading</h6>
+                <p class="card-text">I am a very simple card. I am good at containing small bits of information.
+                I am convenient because I require little markup to use effectively.</p>
+              </div>
+              <div class="card-action">
+                  <a href="#">Action 1</a>
+                  <a href="#">Action 2</a>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- row ends -->
+
+
+        <div class="row">
+
+        <div class="col s12 m6 l3">
+          <div class="card condensed">
+            <div class="icons-panel">
+                <i class="material-icons right">more_vert</i>
+                <i class="material-icons right">arrow_drop_down_circle</i>
+                <i class="material-icons right">star</i>
+            </div>
+            <div class="card-media">
+            </div>
+            <div class="card-content">
+              <h4>Title</h4>
+              <h6>Subheading</h6>
+            </div>
+            <div class="card-action">
+                <a href="#">Action 1</a>
+                <a href="#">Action 2</a>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col s12 m6 l3">
+          <div class="card condensed no-visual">
+            <div class="icons-panel">
+                <i class="material-icons right">more_vert</i>
+                <i class="material-icons right">arrow_drop_down_circle</i>
+                <i class="material-icons right">star</i>
+            </div>
+            <div class="card-content">
+              <h4>Title</h4>
+              <h6>Subheading</h6>
+              <p class="card-text">I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro maxime inventore officiis! Nisi iure expedita quidem esse, odio dolor, culpa, doloribus, sed dolorum ullam tempore et aut deleniti laboriosam consectetur?</p>
+            </div>
+            <div class="card-action">
+                <a href="#">Action 1</a>
+                <a href="#">Action 2</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card normal">
+            <div class="icons-panel">
+                <i class="material-icons right">more_vert</i>
+                <i class="material-icons right">arrow_drop_down_circle</i>
+                <i class="material-icons right">star</i>
+            </div>
+            <div class="card-media">
+            </div>
+            <div class="card-content">
+              <h4>Title</h4>
+              <h6>Subheading</h6>
+              <p class="card-text">I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">Action 1</a>
+                <a href="#">Action 2</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m6 l3">
+          <div class="card normal">
+            <div class="icons-panel">
+                <i class="material-icons right">more_vert</i>
+                <i class="material-icons right">arrow_drop_down_circle</i>
+                <i class="material-icons right">star</i>
+            </div>
+            <div class="card-media">
+            </div>
+            <div class="card-content">
+              <h4>Title</h4>
+              <h6>Subheading</h6>
+              <p class="card-text">I am a very simple card. I am good at containing small bits of information.
+              I am convenient because I require little markup to use effectively.</p>
+            </div>
+            <div class="card-action">
+                <a href="#">Action 1</a>
+                <a href="#">Action 2</a>
+            </div>
+          </div>
+        </div>
+
+          </div> <!-- row ends -->  
+
 
         <div class="row">
 
@@ -434,6 +577,41 @@
 
     <!-- All Scripts -->
     <script src="scripts/bundle.js"></script>
+    <script>
+      (function(){
+
+        //check rows for 3 or more .m6 class children
+        // function rowCheck(){
+        //   $('.row').each(function(i, obj) {
+        //       if ($(this).children('.m6').length > 2){
+        //           $(this).children('.m6').addClass('mobile-clearfix')
+        //       };
+        //   });  
+
+        // }
+
+        // rowCheck();
+
+
+        function rowCheck(){
+          $('.row').each(function(i, obj) {
+
+              if ($(this).children('.m6').length > 2){
+
+                  var a = $(this).children();
+
+                
+                $(this).children('.m6').addClass('mobile-clearfix')
+              };
+
+          });  
+
+        }
+
+        rowCheck();
+
+      })();
+    </script>
 
 
   </body>
