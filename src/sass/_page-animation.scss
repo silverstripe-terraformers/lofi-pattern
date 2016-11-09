@@ -1955,3 +1955,26 @@
   -webkit-animation-name: overlay-slide-out-right;
           animation-name: overlay-slide-out-right;
 }
+
+// All CSS Animations
+
+// Targeting navigation list items only for this hover effect. 
+// Moving Arrows on Side Nav
+.left-navigation li:hover a i.fa.fa-angle-down {
+  font-weight: 600 !important;
+  transition: transform 0.3s;
+  transform: translateX(-1em) rotate(90deg);
+}
+
+.side-nav.metismenu li.active i.material-icons {
+  font-weight: 800;
+  color: yellow;
+}
+
+.side-nav.metismenu li:hover i.material-icons, 
+.side-nav.metismenu li.active i.material-icons  {
+  transition: transform 0.3s;
+  transform: translateX(0em) rotate(90deg);
+}
+
+ // .side-nav.metismenu li.active a.active

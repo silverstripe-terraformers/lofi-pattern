@@ -44,7 +44,7 @@
 
 }
 
-@media (min-width:641px) and (max-width: 991px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+@media (min-width:641px) and (max-width: 992px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
 	  	// Remove full screen side nav
 	  	.left-nav-container {
@@ -66,7 +66,7 @@
 
 }
 
-@media (min-width:992px) and (max-width: 1024px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+@media (min-width:992px) and (max-width: 1023px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
 
 		html body div.row.over-row div#cardWrapper.col.s12.m12.l10.card-wrapper.animsition div.row div.col.s12 div.page-header h4.test{
 			color: blue;
@@ -74,7 +74,7 @@
 	
 	  	// Remove full screen side nav
 	  	.left-nav-container {
-	  		display: block !important;
+	  		display: none;
 	  	}
 
 	  	.nav-horizontal {
@@ -93,7 +93,7 @@
 
 }
 
-@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+@media (min-width:1024px) { /* big landscape tablets, laptops, and desktops */ 
 		html body div.row.over-row div#cardWrapper.col.s12.m12.l10.card-wrapper.animsition div.row div.col.s12 div.page-header h4.test{
 			color: red;
 		}

@@ -22,32 +22,10 @@ $navigation-sub-border-color : lighten($navigation-sub-bg, 7%);
 $navigation-sub-color-active : #fff;
 
 
-body {
-
-  background-color: $body-bg;
-  color: $font-color;
-  font-family: "Open sans", Sans-serif;
-  padding: 0;
-  margin: 0;
-
+a:hover, a:active, a:focus {
+  color: $stats-orange;
 }
 
-a {
-
-  text-decoration: none;
-
-}
-
-h1 {
-
-  margin-top: 0;
-
-}
-
-h6 {
-  font-weight: 600;
-  font-size: 1.2em;
-}
 
 #contentWrapper {
 
