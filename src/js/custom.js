@@ -73,7 +73,6 @@ exports.cm = function(){
 				overlayParentElement : 'body'
 			});
 
-			var checkCards = function(){
 
 			var mobileClearFix = function(){
 
@@ -97,9 +96,9 @@ exports.cm = function(){
 				            $capture.each(function(i, obj) {
 				            	//Extract 'condensed' and 'normal' class names from element
 				                var $classNames = $(this).children().context.firstElementChild.className.toString();
-				                //Resduce string for inspection and also to delete other css multiclasses
+				                //Reduce string for inspection and also to delete other css multiclasses
 								var updateString = $classNames.substring(0, 14);	
-								//Push string items to testing array			         
+								//Push string items to an array			         
 				                testArray.push(updateString);
 
 				                //Check array items for equality, remove class, reset testArray
@@ -107,6 +106,7 @@ exports.cm = function(){
 				                	if (testArray[0] === testArray[1]) {
 				                		$capture.removeClass('mobile-clearfix');
 				                	}
+				                	//Reset array for next iteration
 				                	testArray = [];
 				                };
 
@@ -115,9 +115,9 @@ exports.cm = function(){
 				                	checkArray();
 				                }
 				             
-				                //The return below will limit nested loop .m6 check to 2 iterations so only first 2 
-				                //cards are checked within each ".row" css will adjust and correct bottom margins 
-				                //for any 1 or 2 card rows.
+				                //The return below will limit nested loop .m6 class check (line 96) to 2 iterations 
+				                //so only the first 2 cards are checked within each ".row", CSS will adjust and correct bottom margins. 
+				                //See _media.scss = .s12.m6.l3.mobile-clearfix:nth-of-type(-n+2) {min-height: 48em;}
 				                return i < 1;
 				            });
 
@@ -125,11 +125,9 @@ exports.cm = function(){
 
 				      }); //row each loop ends
 
-			}; //mobileClearFix Ends
+			}(); //mobileClearFix Ends
 
-			mobileClearFix();
 
-	     }();
 
 		}; //init method ends
 
@@ -139,7 +137,7 @@ exports.cm = function(){
 	 		//Check window size and run internal functions. 
 	 		var checkSize = $(window).width();
 
-	 		if(checkSize <= 1180){
+	 		if(checkSize <= 992){
 	 			mobileSideNav();
 	 		}
 

@@ -1,9 +1,6 @@
 // Media Queries
 
 @media (min-width:320px) and (max-width: 480px) { /* smartphones, iPhone, portrait 480x320 phones */ 
-		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
-		  		color: green;
-		}
 
 		// Remove full screen side nav
 	  	.left-nav-container {
@@ -25,9 +22,6 @@
 }
 
 @media (min-width:481px) and (max-width: 640px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
-		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
-		  		color: blue;
-		}
 
 	  	// Remove full screen side nav
 	  	.left-nav-container {
@@ -51,9 +45,6 @@
 }
 
 @media (min-width:641px) and (max-width: 991px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
-		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
-		  		color: yellow;
-		}
 
 	  	// Remove full screen side nav
 	  	.left-nav-container {
@@ -76,13 +67,14 @@
 }
 
 @media (min-width:992px) and (max-width: 1024px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-		html body div.row.over-row div#cardWrapper.col.s10.card-wrapper div.row h1.tester{
-		  		color: red;
-		}
 
+		html body div.row.over-row div#cardWrapper.col.s12.m12.l10.card-wrapper.animsition div.row div.col.s12 div.page-header h4.test{
+			color: blue;
+		}
+	
 	  	// Remove full screen side nav
 	  	.left-nav-container {
-	  		display: none;
+	  		display: block !important;
 	  	}
 
 	  	.nav-horizontal {
@@ -102,6 +94,10 @@
 }
 
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ 
+		html body div.row.over-row div#cardWrapper.col.s12.m12.l10.card-wrapper.animsition div.row div.col.s12 div.page-header h4.test{
+			color: red;
+		}
+		
 		// Display full screen side nav
 	  	.left-nav-container {
 	  		display: block;
@@ -122,6 +118,11 @@
 }
 
 @media (min-width:1281px) { /* hi-res laptops and desktops */ 
+		
+		html body div.row.over-row div#cardWrapper.col.s12.m12.l10.card-wrapper.animsition div.row div.col.s12 div.page-header h4.test{
+			color: yellow;
+		}
+		
 		// Display full screen side nav
 	  	.left-nav-container {
 	  		display: block;
