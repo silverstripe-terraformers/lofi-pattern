@@ -67,10 +67,6 @@
 }
 
 @media (min-width:992px) and (max-width: 1029px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ 
-
-		html body div.row.over-row div#cardWrapper.col.s12.m12.l10.card-wrapper.animsition div.row div.col.s12 div.page-header h4.test{
-			color: blue;
-		}
 	
 	  	// Remove full screen side nav
 	  	.left-nav-container {
@@ -113,9 +109,6 @@
 }
 
 @media (min-width:1030px) { /* big landscape tablets, laptops, and desktops */ 
-		html body div.row.over-row div#cardWrapper.col.s12.m12.l10.card-wrapper.animsition div.row div.col.s12 div.page-header h4.test{
-			color: red;
-		}
 		
 		// Display full screen side nav
 	  	.left-nav-container {
@@ -137,10 +130,6 @@
 }
 
 @media (min-width:1281px) { /* hi-res laptops and desktops */ 
-		
-		html body div.row.over-row div#cardWrapper.col.s12.m12.l10.card-wrapper.animsition div.row div.col.s12 div.page-header h4.test{
-			color: yellow;
-		}
 		
 		// Display full screen side nav
 	  	.left-nav-container {
