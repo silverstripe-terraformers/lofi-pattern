@@ -137,7 +137,7 @@ exports.cm = function(){
 	 		//Check window size and run internal functions. 
 	 		var checkSize = $(window).width();
 
-	 		if(checkSize <= 992){
+	 		if(checkSize <= 1024){
 	 			mobileSideNav();
 	 		}
 
