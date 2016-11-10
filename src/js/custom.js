@@ -10,6 +10,9 @@ var pageAnimation = require('animsition');
 // Metismenu js
 var metis = require('metismenu');
 
+//Syntax highlighting with Prism
+var prism = require('prismjs');
+
 
 //ALL CUSTOM JS
 /*
@@ -19,7 +22,6 @@ Pupose:  Front End UI Javascript For Initial Design, User Interface,
 		 Responsive Testing and Presentation.
 Notes:   All node module export methods like 'cm()' below are renamed to shorthand. custom.js = cm
          namespace.js  = nm. 
-Standards: 
 */
 
 // All Custom JS
@@ -74,6 +76,7 @@ exports.cm = function(){
 			});
 
 
+			//Function for layout issues due to card condensed & card normal fixed heights
 			var mobileClearFix = function(){
 
 				  	var testArray = [];
@@ -123,7 +126,7 @@ exports.cm = function(){
 
 				        } //if m6 card check ends
 
-				      }); //row each loop ends
+				      }); //row .each() loop ends
 
 			}(); //mobileClearFix Ends
 
@@ -137,18 +140,11 @@ exports.cm = function(){
 	 		//Check window size and run internal functions. 
 	 		var checkSize = $(window).width();
 
-	 		if(checkSize <= 1024){
-	 			mobileSideNav();
-	 		}
-
-			//Activate and setup mobile side navigation
-			function mobileSideNav(){
-				$('.button-collapse').sideNav();
-				$('.side-nav').css('display', 'block');
-			}
-
 			//Desktop side menu functionality and plugin
 			$(function () {
+
+			  $('.button-collapse').sideNav();
+			  $('.side-nav').css('display', 'block');
 
 			  //Targets the click event of the desktop submenu 
 			  //Adds active to clicked element.  
@@ -162,7 +158,6 @@ exports.cm = function(){
 			  $('#sideMenu, #slide-out').metisMenu();
 
 			});
-
 
 		}; //UI.menus end
 
