@@ -161,6 +161,11 @@ a:hover, a:active, a:focus {
     opacity: 0.6;
   }
 
+  i:hover, 
+  a:hover {
+    color: $stats-orange;
+  }
+
 }
 
 //Logo Area In Side Vertical Nav
