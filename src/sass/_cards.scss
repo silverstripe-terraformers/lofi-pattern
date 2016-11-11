@@ -5,6 +5,11 @@
 	h4{margin-bottom: 0.2em;}
 }
 
+//Div around all card content
+.card-wrapper {
+	margin-top: 5.4em;
+	padding-left: 2em;
+}
 
 // Materialize Card Link Override
 .card .card-action a:not(.btn):not(.btn-large):not(.btn-floating)  {

@@ -22,3 +22,10 @@ i.right {
     width: 100%;
     font-weight: 600;
 }
+
+// Nav Overrides For Materialize Css
+.btn-floating, 
+.btn-floating:hover  {
+	background-color: $stats-green;
+}
+

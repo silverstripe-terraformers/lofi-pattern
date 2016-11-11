@@ -5,11 +5,14 @@
 @import 'brand-variables';
 @import "materialize-sass/materialize";
 
+//Plugin Imports
+@import 'highlight.scss';
+@import 'page-animation.scss';
+
 //Material Icons && Fonts
 @import "material-icons";
 @import "fonts";
 @import 'overrides.scss';
-@import 'page-animation.scss';
 @import 'cards.scss';
 
 //Normal Sass Imports
@@ -17,26 +20,6 @@
 @import 'media';
 @import 'elements';
 
-//Div around all card content
-.card-wrapper {
-	margin-top: 5.4em;
-	padding-left: 2em;
-}
-
-// Nav Overrides For Materialize Css
-nav ul li {
-   float: none;
-}
-
-.btn-floating, 
-.btn-floating:hover  {
-	background-color: $stats-green;
-}
-
-nav {
-    color: none;
-    background-color: none;
-}
 
 .fr {
 	float: right;
@@ -112,9 +95,3 @@ nav {
 		font-size: 1.1em;
 	}
 }
-
-.select-wrapper input {
-	border-color: $stats-medium-grey;
-	border-color: -moz-use-text-color -moz-use-text-color $stats-medium-grey;
-}
-

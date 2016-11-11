@@ -22,14 +22,7 @@ table {
 }
 
 pre {
-  font-family: Consolas, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-  margin-bottom: 10px;
-  overflow: auto;
-  width: auto;
-  padding: 5px;
-  background-color: #000;
-  max-height: 600px;
-  color: $stats-cyan;
+  max-height: 45em;
 }
 
 hr {
@@ -54,9 +47,11 @@ body {
 }
 
 a {
-
   text-decoration: none;
+}
 
+nav ul li {
+   float: none;
 }
 
 

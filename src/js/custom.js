@@ -128,7 +128,7 @@ exports.cm = function(){
 
 				      }); //row .each() loop ends
 
-			}(); //mobileClearFix Ends
+			}(); //mobileClearFix function expression Ends
 
 
 
