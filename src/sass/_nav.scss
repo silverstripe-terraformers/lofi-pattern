@@ -22,11 +22,6 @@ $navigation-sub-border-color : lighten($navigation-sub-bg, 7%);
 $navigation-sub-color-active : #fff;
 
 
-a:hover, a:active, a:focus {
-  color: $stats-orange;
-}
-
-
 #contentWrapper {
 
   width: 100%;
