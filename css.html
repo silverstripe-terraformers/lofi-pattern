@@ -140,8 +140,8 @@
           <div class="row">
 
             <div class="page-header">
-              <h2>CSS Structure and Guidelines</h2>
-              <h4></h4>
+              <h2>CSS</h2>
+              <h4>Structure and Guidelines</h4>
 
               <div class="input-field col s2 filter-box">
                  <select>
@@ -162,18 +162,53 @@
                </div>
 
             </div> <!-- Page Header Ends -->
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <h5>Cards & Use Of Classes</h5>
+      <p>
+        The entire css library endeavours to be class selector based, in hyphenated format:
+      </p>
+        <pre><code class="language-css">.a-class {height: 0em} </code></pre>
+      <p>
+        In some instances chaining, multiclassing and #id's are used as css selectors. However, this 'non class selector format' is discouraged and only used to override or address pre-established css libraries and open source plugins. HTML elements or single hyphenated classes are the preferred css selector for the application. 
+      </p>
+      <p>
+        CSS comments are encouraged wherever possible to explain non-evident css rules. Below we see custom selectors (.condensed & .normal) chained to the Materialzed.css library '.card' class. The custom classes '.condensed' & '.normal' are very important css classes within the application. They represent the 2 data card vertical size limit that will control the size of standard cards to improve the applications design and structure within the browser. 
+      </p>
+<pre>
+<code class="language-css">
+// Padding fix for cards with content 
+// Position relative used on outer parent card div to allow for sticky bottom for card-actions
 
-            <pre><code class="language-css">
-              //Brand New
-              p { color: red }
-            </code></pre>
+.card.condensed, 
+.card.normal {
+  padding: 0em;
+  position: relative;
+}
 
-            <pre data-src="prism-test.html"></pre>
+.card.normal {
+  min-height: 44em;
+  max-height: 44em;
+  clear: left;
+}
+
+.card.condensed.no-visual, 
+.card.condensed {
+  min-height: 34em;
+  max-height: 34em;
+  clear: left;
+}
+</code>
+</pre>
+    </div>
+  </div>
+</div>
 
 
 
 
-          </div> <!-- row Ends -->
+</div> <!-- row Ends -->
 
     </div> <!-- col 10 offset Ends -->
    </div>  <!-- over-row Ends -->
