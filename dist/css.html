@@ -45,11 +45,11 @@
         <li>
             <a href="navigation.html" class="animsition-link"> Navigation <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
-        <li>
+        <li class="active">
             <a href="css.html" class="animsition-link"> CSS Guidelines <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
         <li>
-            <a href="js.html" class="animsition-link"> JS Guidelines <i class="fa fa-angle-down leftNavIcon"></i></a>
+            <a href="js.html" class="animsition-link"> JS Info <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
         <li class="split-marker">
             <a href="demo-page.html" class="animsition-link"> Demo Page <i class="fa fa-angle-down leftNavIcon"></i></a>
@@ -125,7 +125,7 @@
         </ul>
       </li>
       <li><a href="#!">CSS Guidelines</a><i class="material-icons">keyboard_arrow_down</i></li>
-      <li><a href="#!">JS Guidelines</a><i class="material-icons">keyboard_arrow_down</i></li>
+      <li><a href="#!">JS Info</a><i class="material-icons">keyboard_arrow_down</i></li>
       <li><a href="#!">Demo Page</a><i class="material-icons">keyboard_arrow_down</i></li>
       
     </ul>
@@ -171,10 +171,10 @@
       </p>
         <pre><code class="language-css">.a-class {height: 0em} </code></pre>
       <p>
-        In some instances chaining, multiclassing and #id's are used as css selectors. However, this 'non class selector format' is discouraged and only used to override or address pre-established css libraries and open source plugins. HTML elements or single hyphenated classes are the preferred css selector for the application. 
+        In some instances chaining, multiclassing and #id's are used as css selectors. However, this non-class selector format is discouraged and only used to override or address pre-established css libraries and open source plugins. HTML elements or single hyphenated classes are the preferred css selector for the application. 
       </p>
       <p>
-        CSS comments are encouraged wherever possible to explain non-evident css rules. Below we see custom selectors (.condensed & .normal) chained to the Materialzed.css library '.card' class. The custom classes '.condensed' & '.normal' are very important css classes within the application. They represent the 2 data card vertical size limit that will control the size of standard cards to improve the applications design and structure within the browser. 
+        CSS comments are encouraged wherever possible to explain non-evident css rules. Below we see custom selectors (.condensed & .normal) chained to the Materialzed.css library '.card' class. The custom classes '.condensed' & '.normal' are very important css classes within the application. They represent the 2 types of data card vertical size limit. This will control the size of standard cards to improve the applications design and structure within the browser. 
       </p>
 <pre>
 <code class="language-css">
@@ -201,9 +201,38 @@
 }
 </code>
 </pre>
-    </div>
-  </div>
-</div>
+
+        <h5>Sass Structure</h5>
+          <p>Sass is used in the pattern library repository. Variables are used to establish colors based on the bran guidelines property. Colors used are based on the current brand guidelines:</p>
+<pre>
+<code class="language-css">
+// Padding fix for cards with content 
+// Position relative used on outer parent card div to allow for sticky bottom for card-actions
+
+// Variables
+$stats-white: #FCFCFC;
+$stats-grey:   #706f6e;
+$stats-orange: #ec6607;
+$stats-blue: #004f9e;
+$stats-purple: #6f2282;
+$stats-cyan: #009bb4;
+$stats-red: #e4003a;
+$stats-yellow: #fbb900;
+$stats-green: #51ae32;
+$stats-grey: #706f6e;
+$stats-logo-grey: #706F6F;
+$stats-light-grey: #F2F2F2;
+$stats-medium-grey: #B7B7B7;
+$stats-black: #000;
+
+</code>
+</pre>
+        <h5>Structure and Imports Continued:</h5>
+        <p>The custom.scss file imports all relevent sass component files, including the materialize sass components. The order of these import files must remain as is so sass variables apply. The file structure and imports of the current sass workflow can be seen below:</p>
+          <img src="img/sass.jpg" alt="">
+    </div> <!-- card ends -->
+  </div> <!-- col ends -->
+</div> <!-- row ends -->
 
 
 
