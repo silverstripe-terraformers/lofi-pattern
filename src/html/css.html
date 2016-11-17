@@ -4,7 +4,6 @@
   <head>
     <title>Statistics New Zealand Site</title>
     <!--Import Google Icon Font-->
-    <!-- <link rel="stylesheet" href="css/bundle.css" /> -->
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/custom.min.css" />
     <!--Let browser know website is optimized for mobile-->
@@ -171,8 +170,37 @@
       </p>
         <pre><code class="language-css">.a-class {height: 0em} </code></pre>
       <p>
-        In some instances chaining, multiclassing and #id's are used as css selectors. However, this non-class selector format is discouraged and only used to override or address pre-established css libraries and open source plugins. HTML elements or single hyphenated classes are the preferred css selector for the application. 
+        In some instances chaining, multiclassing and #id's are used as css selectors. However, this non-class selector format is discouraged and only used to override or address pre-established css libraries and open source plugins. HTML elements or single hyphenated classes are the preferred css selector for the application: 
       </p>
+
+      <pre>
+        <code class="language-css">
+//HTML Elements
+
+pre {
+  max-height: 45em;
+  font-size: 1.2em;
+}
+
+hr {
+  margin: 3em 0em 3em 0em;
+  border-color: $stats-light-grey;
+  background-color: $stats-light-grey;
+  color: $stats-light-grey;
+}
+
+a {
+   outline: 0;
+}
+
+//Css Classes
+
+.mobile-close {
+  border-bottom: 1px solid $stats-logo-grey;
+}
+        </code>
+      </pre>
+      <h5>Comments, Selectors and Common Classes</h5>
       <p>
         CSS comments are encouraged wherever possible to explain non-evident css rules. Below we see custom selectors (.condensed & .normal) chained to the Materialzed.css library '.card' class. The custom classes '.condensed' & '.normal' are very important css classes within the application. They represent the 2 types of data card vertical size limit. This will control the size of standard cards to improve the applications design and structure within the browser. 
       </p>
@@ -227,9 +255,31 @@ $stats-black: #000;
 
 </code>
 </pre>
+        <h5>Sass Nesting</h5>
+        <p>Nesting is used within the sass files. However nesting is limited to 1 level of depth or indentation, as seen below:</p>
+<pre><code class="language-css">
+// Search Icon In Nav
+.icon-contain {
+  display: inline-block;
+  float: right;
+  width: 15%;
+
+  i.material-icons.prefix{
+    font-size: 1.9em;
+    color: $stats-orange;
+    padding: 0.07em 0em 0em 0.1em;
+  }
+}  
+  
+</code></pre>
         <h5>Structure and Imports Continued:</h5>
-        <p>The custom.scss file imports all relevent sass component files, including the materialize sass components. The order of these import files must remain as is so sass variables apply. The file structure and imports of the current sass workflow can be seen below:</p>
-          <img src="img/sass.jpg" alt="">
+        <p>The custom.scss file imports all relevant sass component files, including the materialize sass components that encompass ther entire materialize css library (sass/materialize-sass/). The order of these import files must remain as is so sass variables apply correctly. The file structure and imports of the current sass workf  low can be seen in the image below.</p> 
+        <p>The pattern library is processed via a gulp workflow. The 'src' folder contains all of the pre-processed html, js and css files. These are the files that should be edited if changes need to be made. Live files for browser rendering are processed to the dist folder.</p>
+        <img style="text-align: center;" src="img/sass.jpg" alt="">
+        <h5>Current Css Files In Use:</h5>
+        <p>The project is currently requesting 2 separate css files. The 'custom.min.css' file represents all of the sass processed files, including custom css and the materialize css library.</p>
+        <pre data-src="snippet-css-links.html"></pre>  
+
     </div> <!-- card ends -->
   </div> <!-- col ends -->
 </div> <!-- row ends -->

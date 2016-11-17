@@ -1,3 +1,12 @@
+//jQuery
+$ = jQuery = require('jquery');
+
+//SlideOut Nav
+var Slideout = require('slideout');
+
+//Materialize js
+var materialize = require("materialize");
+
 //Namespace pattern
 var namespace = require('./namespace.js');
 
@@ -130,15 +139,10 @@ exports.cm = function(){
 
 			}(); //mobileClearFix function expression Ends
 
-
-
 		}; //init method ends
 
 		// Menus Functionality
 		UI.menus = function(){
-
-	 		//Check window size and run internal functions. 
-	 		var checkSize = $(window).width();
 
 			//Desktop side menu functionality and plugin
 			$(function () {

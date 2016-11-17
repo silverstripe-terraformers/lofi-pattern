@@ -12291,6 +12291,15 @@ var Emitter = (function () {
 exports["default"] = Emitter;
 module.exports = exports["default"];
 },{}],11:[function(require,module,exports){
+//jQuery
+$ = jQuery = require('jquery');
+
+//SlideOut Nav
+var Slideout = require('slideout');
+
+//Materialize js
+var materialize = require("materialize");
+
 //Namespace pattern
 var namespace = require('./namespace.js');
 
@@ -12423,15 +12432,10 @@ exports.cm = function(){
 
 			}(); //mobileClearFix function expression Ends
 
-
-
 		}; //init method ends
 
 		// Menus Functionality
 		UI.menus = function(){
-
-	 		//Check window size and run internal functions. 
-	 		var checkSize = $(window).width();
 
 			//Desktop side menu functionality and plugin
 			$(function () {
@@ -12489,24 +12493,15 @@ exports.cm = function(){
 
 
 }; //exports.cm ends
-},{"./namespace.js":13,"animsition":1,"highcharts":2,"highcharts/modules/exporting":3,"metismenu":6,"prismjs":7}],12:[function(require,module,exports){
+},{"./namespace.js":13,"animsition":1,"highcharts":2,"highcharts/modules/exporting":3,"jquery":4,"materialize":5,"metismenu":6,"prismjs":7,"slideout":8}],12:[function(require,module,exports){
 // All Imports
-
-//jQuery
-$ = jQuery = require('jquery');
-
-//SlideOut Nav
-var Slideout = require('slideout');
-
-//Materialize js
-var materialize = require("materialize");
 
 //Custom js
 var customjs = require('./custom.js');
 
 //Invoke all custom.js
 customjs.cm();
-},{"./custom.js":11,"jquery":4,"materialize":5,"slideout":8}],13:[function(require,module,exports){
+},{"./custom.js":11}],13:[function(require,module,exports){
 exports.nm = function(){
 
 	// create the root namespace and making sure we're not overwriting it
