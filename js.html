@@ -4,6 +4,7 @@
   <head>
     <title>Statistics New Zealand Site</title>
     <!--Import Google Icon Font-->
+    <!-- <link rel="stylesheet" href="css/bundle.css" /> -->
     <link rel="stylesheet" href="css/font-awesome.css">
     <link rel="stylesheet" href="css/custom.min.css" />
     <!--Let browser know website is optimized for mobile-->
@@ -47,7 +48,7 @@
         <li>
             <a href="css.html" class="animsition-link"> CSS Guidelines <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
-        <li>
+        <li class="active">
             <a href="js.html" class="animsition-link"> JS Info <i class="fa fa-angle-down leftNavIcon"></i></a>
         </li>
         <li class="split-marker">
@@ -139,8 +140,8 @@
           <div class="row">
 
             <div class="page-header">
-              <h2>CSS</h2>
-              <h4>Structure and Guidelines</h4>
+              <h2>Javascript</h2>
+              <h4>Structure and usage within the pattern library</h4>
 
               <div class="input-field col s2 filter-box">
                  <select>
@@ -164,122 +165,59 @@
 <div class="row">
   <div class="col s12">
     <div class="card">
-      <h5>Cards & Use Of Classes</h5>
+      <h5>Node Modules</h5>
       <p>
-        The entire css library endeavours to be class selector based, in hyphenated format:
+        The pattern library uses several js libraries and plugins for ui design and display purposes. These are imported via the node modules require method on the custom.js file in js/custom.js:
       </p>
-        <pre><code class="language-css">.a-class {height: 0em} </code></pre>
-      <p>
-        In some instances chaining, multiclassing and #id's are used as css selectors. However, this non-class selector format is discouraged and only used to override or address pre-established css libraries and open source plugins. HTML elements or single hyphenated classes are the preferred css selector for the application: 
-      </p>
+        <pre>
+         <code class="language-js">
+          //jQuery
+          $ = jQuery = require('jquery');
 
+          //SlideOut Nav
+          var Slideout = require('slideout');
+
+          //Materialize js from the materialize library
+          var materialize = require("materialize");
+
+          //Namespace pattern for js structure
+          var namespace = require('./namespace.js');
+
+          //Require HighCharts 
+          var Highcharts = require('highcharts');
+
+          //Page animation transitions
+          var pageAnimation = require('animsition');
+
+          // Metismenu js for vertical nav extending
+          var metis = require('metismenu');
+
+          //Syntax highlighting with Prism
+          var prism = require('prismjs');
+         </code>
+       </pre>
+      <h5>Namespace Pattern and Current Methods</h5>
+      <p>The custom js file uses a basic namespacing pattern. This is used to provide some form of structure if the current codebase expands. The three main methods within the current pattern library are: init, menus and charts. They are used for basic ui rendering purposes.</p>
+      <p>A function of importance to the current template structure is <i>mobileClearfix</i>. It sits within the 'init' method and provides a structural check and adjustment of card sizings for the application. It is extensively commented if further information is required. </p>
       <pre>
-        <code class="language-css">
-//HTML Elements
+        <code class="language-js">
+        //All Custom JS
+        exports.cm = function(){
 
-pre {
-  max-height: 45em;
-  font-size: 1.2em;
-}
+        (function(){
+            
+            //Initiate namespace instance to create accesible object
+            UI = namespace.nm();
 
-hr {
-  margin: 3em 0em 3em 0em;
-  border-color: $stats-light-grey;
-  background-color: $stats-light-grey;
-  color: $stats-light-grey;
-}
-
-a {
-   outline: 0;
-}
-
-//Css Classes
-
-.mobile-close {
-  border-bottom: 1px solid $stats-logo-grey;
-}
+            //Use namespace method
+            UI.createNS("UI.init");
+            UI.createNS("UI.menus");
+            UI.createNS("UI.charts");
         </code>
       </pre>
-      <h5>Comments, Selectors and Common Classes</h5>
-      <p>
-        CSS comments are encouraged wherever possible to explain non-evident css rules. Below we see custom selectors (.condensed & .normal) chained to the Materialzed.css library '.card' class. The custom classes '.condensed' & '.normal' are very important css classes within the application. They represent the 2 types of data card vertical size limit. This will control the size of standard cards to improve the applications design and structure within the browser. 
-      </p>
-<pre>
-<code class="language-css">
-// Padding fix for cards with content 
-// Position relative used on outer parent card div to allow for sticky bottom for card-actions
-
-.card.condensed, 
-.card.normal {
-  padding: 0em;
-  position: relative;
-}
-
-.card.normal {
-  min-height: 44em;
-  max-height: 44em;
-  clear: left;
-}
-
-.card.condensed.no-visual, 
-.card.condensed {
-  min-height: 34em;
-  max-height: 34em;
-  clear: left;
-}
-</code>
-</pre>
-
-        <h5>Sass Structure</h5>
-          <p>Sass is used in the pattern library repository. Variables are used to establish colors based on the bran guidelines property. Colors used are based on the current brand guidelines:</p>
-<pre>
-<code class="language-css">
-// Padding fix for cards with content 
-// Position relative used on outer parent card div to allow for sticky bottom for card-actions
-
-// Variables
-$stats-white: #FCFCFC;
-$stats-grey:   #706f6e;
-$stats-orange: #ec6607;
-$stats-blue: #004f9e;
-$stats-purple: #6f2282;
-$stats-cyan: #009bb4;
-$stats-red: #e4003a;
-$stats-yellow: #fbb900;
-$stats-green: #51ae32;
-$stats-grey: #706f6e;
-$stats-logo-grey: #706F6F;
-$stats-light-grey: #F2F2F2;
-$stats-medium-grey: #B7B7B7;
-$stats-black: #000;
-
-</code>
-</pre>
-        <h5>Sass Nesting</h5>
-        <p>Nesting is used within the sass files. However nesting is limited to 1 level of depth or indentation, as seen below:</p>
-<pre><code class="language-css">
-// Search Icon In Nav
-.icon-contain {
-  display: inline-block;
-  float: right;
-  width: 15%;
-
-  i.material-icons.prefix{
-    font-size: 1.9em;
-    color: $stats-orange;
-    padding: 0.07em 0em 0em 0.1em;
-  }
-}  
-  
-</code></pre>
-        <h5>Structure and Imports Continued:</h5>
-        <p>The custom.scss file imports all relevant sass component files, including the materialize sass components that encompass ther entire materialize css library (sass/materialize-sass/). The order of these import files must remain as is so sass variables apply correctly. The file structure and imports of the current sass workf  low can be seen in the image below.</p> 
-        <p>The pattern library is processed via a gulp workflow. The 'src' folder contains all of the pre-processed html, js and css files. These are the files that should be edited if changes need to be made. Live files for browser rendering are processed to the dist folder.</p>
-        <img style="text-align: center;" src="img/sass.jpg" alt="">
-        <h5>Current Css Files In Use:</h5>
-        <p>The project is currently requesting 2 separate css files. The 'custom.min.css' file represents all of the sass processed files, including custom css and the materialize css library.</p>
-        <pre data-src="snippet-css-links.html"></pre>  
-
+      <h5>Files and Processing</h5>
+      <p>All js in compiled and minified into one file called <i>bundle.js</i> that is linked to the current pattern library directly above the closing body element:</p>
+      <pre data-src="snippet-js-link.html"></pre> 
     </div> <!-- card ends -->
   </div> <!-- col ends -->
 </div> <!-- row ends -->
