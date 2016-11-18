@@ -139,25 +139,31 @@ $navigation-sub-color-active : #fff;
 
 //Left Nav Separator
 .left-navigation li.split-marker{
-  margin-bottom: 3.5em;
+  margin-bottom: 2.5em;
   border-bottom: none;
 }
 
 //Menu Social Icons
 .left-navigation li.social-menu {
-  margin-top: 2em;
   padding-left: 0.2em;
 
   //Social Icons
   i {
-    font-size: 2em;
+    font-size: 1.38em;
     margin: 0.4em;
     color: $stats-grey;
-    opacity: 0.6;
+    opacity: 0.7;
   }
+
+  a {
+    border: none;
+    display: inline;
+    padding: 0;
+  } 
 
   i:hover, 
   a:hover {
+    opacity: 1;
     color: $stats-orange;
   }
 
@@ -165,9 +171,8 @@ $navigation-sub-color-active : #fff;
 
 //Logo Area In Side Vertical Nav
 .main-logo {
-
     width: 100%;
-    height: 6.5em;
+    height: 7.2em;
     background-repeat: no-repeat;
     background-size: contain;
     background-color: $stats-black;
@@ -191,7 +196,7 @@ $navigation-sub-color-active : #fff;
 
 
 //Original component used them in it's css, so we have the use of an Id. 
-.left-navigation.master li.main-logo a {
+li.main-logo a {
   border-bottom: none;
   font-size: 1.2em;
   padding-left: 0em;
@@ -199,7 +204,10 @@ $navigation-sub-color-active : #fff;
   padding-top: 1em;
   color: #efefef;
   font-style: italic;
+  overflow: unset;
+  padding-top: 0.2em;
 }
+
 
 //Side menu active state 
 .left-navigation li.active a i.fa.fa-angle-down {
