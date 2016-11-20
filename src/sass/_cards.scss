@@ -5,6 +5,23 @@
 	h4{margin-bottom: 0.2em;}
 }
 
+.bg-orange {
+	background-color: $stats-orange;
+}
+
+.bg-purple {
+	background-color: $stats-purple;
+}
+
+.orange {
+	color: $stats-orange;
+}
+
+.purple {
+	color: $stats-purple;
+}
+
+
 //Div around all card content
 .card-wrapper {
 	margin-top: 5.4em;
@@ -104,4 +121,37 @@
     margin-right: 20px;
     text-transform: uppercase;
     transition: color 0.3s ease 0s;
+}
+
+// News Item cards
+
+
+
+.card.news-item {
+
+	color: #fff;
+
+	h1 {
+		font-size: 3.4em;
+		font-weight: 600;
+	}
+
+	i { 
+		color: #fff;
+	}
+
+	.icons-panel {
+		border-bottom: none;
+	}
+
+	.card-action {
+		border-top: none;
+	}
+
+	.card-action a:not(.btn):not(.btn-large):not(.btn-large):not(.btn-large):not(.btn-floating) {
+		float: right;
+		color: #fff;
+		font-size: 1.1em;
+	}
+
 }
