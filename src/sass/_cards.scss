@@ -13,12 +13,20 @@
 	background-color: $stats-purple;
 }
 
+.bg-green {
+	background-color: $stats-green;
+}
+
 .orange {
 	color: $stats-orange;
 }
 
 .purple {
 	color: $stats-purple;
+}
+
+.green {
+	color: $stats-green;
 }
 
 
@@ -68,7 +76,7 @@
 
 // Card Sections
 .icons-panel {
-	padding: 20px;
+	padding: 0.5em;
 	border-bottom: 1px solid rgba(160, 160, 160, 0.2)
 }
 
@@ -127,7 +135,9 @@
 
 
 
-.card.news-item {
+.card.news-item,
+.card.news-item-img
+ {
 
 	color: #fff;
 
@@ -152,6 +162,24 @@
 		float: right;
 		color: #fff;
 		font-size: 1.1em;
+	}
+
+}
+
+.card.news-item-img {
+
+	position: relative;
+
+	i {
+		// float: none;
+		right: 0.2em;
+		position: absolute;
+		padding: 0.3em;
+		z-index: 10;
+	}
+
+	img { 
+	    width: 100%;
 	}
 
 }
